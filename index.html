@@ -223,12 +223,12 @@
 <div class="container">
     <div class="header">
         <h1>📘 IITC-AIESG 学习笔记库</h1>
-        <p>AI+ESG · 经济法 · 会计 · 战略 · 可持续金融 · 数据治理 · 全面备考</p>
+        <p>AI+ESG分析师· 全面备考</p>
         <div class="stats-bar" id="globalStats">📚 加载中...</div>
     </div>
 
     <div class="search-box">
-        <input type="text" id="searchInput" placeholder="🔍 搜索笔记标题 (例如: 01, 物权, 长期股权投资, 战略分析, ESG... )">
+        <input type="text" id="searchInput" placeholder="🔍 搜索笔记标题 (例如: 01, ESG,... )">
     </div>
 
     <div id="categoriesContainer"></div>
@@ -236,7 +236,7 @@
 </div>
 
 <script>
-    // ======================== 18个完整分类 (扩充至18个，覆盖AI-ESG，经济法，会计，战略，金融，数据等) ========================
+    // ======================== 18个完整章节 ========================
     const categories = [
         {
             name: "18AI在ESG领域的应用",
@@ -303,33 +303,29 @@
             ]
         },
         {
-            name: "12· 战略 · 实施与风控",
+            name: "12 运用碳管理平台高效管控供应链碳数据",
             emoji: "⚙️",
             files: [
-                "notes/战略/06 战略实施与组织结构.html",
-                "notes/战略/07 公司治理与风险管理.html",
-                "notes/战略/08 内部控制与ESG整合.html",
-                "notes/战略/09 数字化战略.html"
+                "notes/12 运用碳管理平台高效管控供应链碳数据/供应链碳管理平台.html"
             ]
         },
         {
-            name: "11 · ESG报告与标准体系",
+            name: "11 企业绿色供应链建设与尽职调查实操",
             emoji: "📈",
             files: [
-                "notes/ESG标准/01 GRI标准详解.html",
-                "notes/ESG标准/02 SASB与TCED.html",
-                "notes/ESG标准/03 欧盟CSRD指令.html",
-                "notes/ESG标准/04 中国上市公司ESG指引.html"
+                "notes/11 企业绿色供应链建设与尽职调查实操/01 电子行业供应链管理实操.html",
+                "notes/11 企业绿色供应链建设与尽职调查实操/02 新能源行业供应链尽职调查实操速通.html"
             ]
         },
         {
-            name: "10 · 数据治理与AI伦理",
+            name: "10 绿色供应链建设全流程落地指南",
             emoji: "🔐",
             files: [
-                "notes/数据治理/01 数据隐私与合规.html",
-                "notes/数据治理/02 算法公平性评估.html",
-                "notes/数据治理/03 AI伦理框架.html",
-                "notes/数据治理/04 数据资产管理.html"
+                "notes/10 绿色供应链建设全流程落地指南/绿色供应链建设全流程落地指南_总体框架.html",
+                "notes/10 绿色供应链建设全流程落地指南/01 解锁供应链与可持续供应链管理.html",
+                "notes/10 绿色供应链建设全流程落地指南/02 掌握可持续采购原则与政策落地方法.html",
+                "notes/10 绿色供应链建设全流程落地指南/03 供应商ESG管理的实操步骤.html",
+                "notes/10 绿色供应链建设全流程落地指南/04 供应链尽职调查的全流程指南.html"       
             ]
         },
         {
@@ -352,30 +348,25 @@
             ]
         },
         {
-            name: "07 · 供应链ESG管理",
+            name: "07 碳中和目标设定与路径规划",
             emoji: "🚚",
             files: [
-                "notes/供应链/01 供应链尽职调查.html",
-                "notes/供应链/02 低碳物流实践.html",
-                "notes/供应链/03 供应商ESG评级.html"
+                "notes/07 碳中和目标设定与路径规划/07 碳中和目标设定与路径规划-总体框架.html",
+                "notes/07 碳中和目标设定与路径规划/07 碳中和目标设定与路径规划-具体内容.html"
             ]
         },
         {
-            name: "06 · 可持续投资组合",
+            name: "06 出海ESG合规破局指南",
             emoji: "💹",
             files: [
-                "notes/可持续投资/01 ESG整合策略.html",
-                "notes/可持续投资/02 影响力投资.html",
-                "notes/可持续投资/03 负面筛选与主题投资.html"
+                "notes/06 出海ESG合规破局指南/07 出海ESG合规破局指南.html"
             ]
         },
         {
-            name: "05 · 人工智能监管与合规",
+            name: "05 国内ESG合规全景攻略",
             emoji: "⚙️🤖",
             files: [
-                "notes/AI合规/01 EU AI法案解读.html",
-                "notes/AI合规/02 中国生成式AI管理办法.html",
-                "notes/AI合规/03 AI责任与保险.html"
+                "notes/05 国内ESG合规全景攻略/06 国内ESG合规全景攻略.html"
             ]
         },
         {
