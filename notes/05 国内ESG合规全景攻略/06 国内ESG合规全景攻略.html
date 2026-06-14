@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>国内ESG合规全景攻略 · 专题框架总结</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #eef2f5;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            padding: 40px 20px;
+            color: #1a2c3e;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 32px 40px;
+        }
+        /* 下载栏 */
+        .toolbar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 16px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+        .btn-download {
+            background: #1e6f5c;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-download:hover {
+            background: #0f4c3f;
+            transform: translateY(-1px);
+        }
+        .badge {
+            background: #fff3e0;
+            color: #c26b1a;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #f9f0c1 0%, #f9f0c1 40%, transparent 60%);
+            padding: 0 4px;
+            font-weight: 600;
+            border-radius: 6px;
+            color: #8a6300;
+        }
+        .highlight-red {
+            background: #ffe6e5;
+            color: #b91c1c;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-left: 8px;
+        }
+        h1 {
+            font-size: 2.1rem;
+            margin-bottom: 0.4rem;
+            background: linear-gradient(135deg, #1e466e, #2a9d8f);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+            padding-left: 0.5rem;
+            border-left: 5px solid #2a9d8f;
+            color: #1e466e;
+        }
+        h3 {
+            font-size: 1.25rem;
+            margin: 1.2rem 0 0.6rem;
+            color: #2c5a6e;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h4 {
+            font-weight: 600;
+            margin: 1rem 0 0.3rem;
+            color: #1e4a5f;
+        }
+        p, li {
+            line-height: 1.55;
+            margin-bottom: 0.6rem;
+            color: #2d3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            font-size: 0.9rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            background: #fefefe;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        th {
+            background: #e6f4f1;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 1px solid #cbd5e1;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #e9edf2;
+            vertical-align: top;
+        }
+        .card-note {
+            background: #f0f7fc;
+            border-left: 4px solid #2a9d8f;
+            padding: 14px 20px;
+            border-radius: 20px;
+            margin: 1rem 0;
+        }
+        .grid-models {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        .model-card {
+            flex: 1;
+            background: #faf9ff;
+            border-radius: 20px;
+            padding: 14px;
+            border: 1px solid #dfe6ed;
+        }
+        hr {
+            margin: 24px 0;
+            border: none;
+            height: 1px;
+            background: #e2e8f0;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #7893a8;
+            border-top: 1px solid #e2edf2;
+            padding-top: 20px;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 20px; }
+            .grid-models { flex-direction: column; }
+            table { font-size: 0.75rem; }
+        }
+        ul, ol { padding-left: 1.5rem; margin: 0.6rem 0; }
+        .risk-tag {
+            background: #fef2e8;
+            border-radius: 30px;
+            padding: 2px 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #c2410c;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="toolbar">
+        <button class="btn-download" id="downloadMarkdownBtn">📥 下载 Markdown 文件</button>
+    </div>
+
+    <h1>📘 国内ESG合规全景攻坚<br><span style="font-size:1rem; color:#3b7a6b;">监管体系解码 · 强合规领域落地指南</span></h1>
+    <p><strong>专题来源：</strong> 李蕊律师、乐清月律师主讲课程内容整理（基于《国内ESG合规全景攻略》原讲义）</p>
+
+    <!-- 第一部分：背景与框架 -->
+    <h2>一、课程背景与总体目标</h2>
+    <p><span class="highlight">ESG合规重要性</span> 频发的ESG事件影响企业声誉与股价，但企业普遍存在对ESG理解浅、合规管理缺失等问题。课程目标明确：<strong>“不是教你拿高分，而是教你如何不踩雷”</strong>，聚焦红线识别、风险防控与制度落地。</p>
+    <div class="card-note">
+        ⚠️ 企业对ESG的三大误解：将ESG仅视为品牌工具、数据孤岛严重、合规体系割裂。<br>
+        🎯 课程目的：明确合规边界 → 搭建体系 → 通过失败案例规避风险。
+    </div>
+
+    <h2>二、国内ESG监管格局</h2>
+    <p><span class="highlight">多头协同监管体系</span>：证监会、交易所、发改委、生态环境部、财政部、央行、银保监会、国资委等协同推进，形成从标准制定到监督实施的闭环。</p>
+    
+    <h3>2.1 监管定位与主要分工</h3>
+    <table>
+        <thead><tr><th>监管定位</th><th>主要部门</th><th>职能范围</th><th>典型政策/行动</th></tr></thead>
+        <tbody>
+            <tr><td>顶层设计协调</td><td>国务院、发改委</td><td>将ESG纳入可持续发展战略，双碳目标</td><td>“双碳”目标写入国家战略</td></tr>
+            <tr><td rowspan="3">分领域监管</td><td>证监会</td><td>统筹上市公司ESG信披规则</td><td>修订《上市公司治理准则》《信披办法》</td></tr>
+            <tr><td>沪深北交易所</td><td>制定具体披露标准及日常监管</td><td>《可持续发展报告指引》《编制指南》</td></tr>
+            <tr><td>央行、银保监会</td><td>绿色金融监管，绿色贷款/债券</td><td>《关于进一步强化金融支持绿色低碳发展的指导意见》</td></tr>
+            <tr><td>分领域监管</td><td>财政部</td><td>制定可持续披露准则体系</td><td>《企业可持续披露准则——基本准则（试行）》</td></tr>
+            <tr><td>环境执法</td><td>生态环境部</td><td>环境信息披露、排污许可、碳排监管</td><td>《企业环境信息依法披露管理办法》</td></tr>
+            <tr><td>央企治理示范</td><td>国资委</td><td>推动央企ESG治理与信披</td><td>《央企ESG指导意见》《央企ESG专项报告参考指标体系》</td></tr>
+        </tbody>
+    </table>
+    <p><span class="highlight">强制信息披露深化</span>：沪深交易所要求成分股及双重上市公司2026年前披露可持续发展报告（覆盖市值超51%）；生态环境部要求重点排污单位公开环境数据。</p>
+    <p><span class="highlight">监管整体趋势：</span> 从自愿转向半强制；九部委联动审查；数据真实性成为焦点（问询函、第三方鉴证增加）；绿色贷款余额突破35.75万亿，供应链ESG传导加速。</p>
+
+    <h2>三、监管重点与企业痛点</h2>
+    <table>
+        <thead><tr><th>受监管主体</th><th>监管强度</th><th>核心关注点</th><th>法规/政策依据</th></tr></thead>
+        <tbody>
+            <tr><td>A股上市公司（尤其指数成分股）</td><td>★★★★☆</td><td>碳排放、员工权益、供应链责任、董事会监督等</td><td>证监会信披办法 + 交易所指引</td></tr>
+            <tr><td>中央企业及控股上市公司</td><td>★★★★★</td><td>ESG战略嵌入、供应链ESG、科技创新、报告全覆盖</td><td>国资委指导意见及专项报告体系</td></tr>
+            <tr><td>重点排污单位、高耗能企业</td><td>★★★★☆</td><td>实时排放、碳核算、环境违法披露</td><td>《企业环境信息依法披露管理办法》</td></tr>
+            <tr><td>中小企业</td><td>★★★☆☆</td><td>参与试点，供应链传导压力</td><td>《企业可持续披露基本准则》不“一刀切”</td></tr>
+        </tbody>
+    </table>
+    <p><strong>三大痛点</strong>：<span class="highlight">①数据孤岛</span>跨部门协同缺失；<span class="highlight">②“漂绿”风险高企</span>（某酒业公司选择性披露被质疑）；<span class="highlight">③ESG与现有合规体系割裂</span>（某央企同时运行合规、风控、ESG三套系统，治理效能低下）。</p>
+    <div class="card-note">
+        📌 现状 vs 理想：董事会应下设ESG委员会，现实多由品牌/法务代管；ESG风险未纳入全面风控体系，高管KPI缺乏ESG考核。
+    </div>
+
+    <h2>四、ESG强合规领域 · 五大板块深度解析</h2>
+    
+    <!-- 4.1 信息披露 -->
+    <h3>🔹 4.1 ESG信息披露（强合规重中之中）</h3>
+    <p><span class="highlight">三大里程碑</span>：2024.11财政部等九部委发布《企业可持续披露准则——基本准则》；2024.5三大交易所《可持续发展报告指引》生效；2025.1交易所发布《编制指南》实操手册。</p>
+    <p><strong>🔎 双重重要性（Double Materiality）</strong> —— <span class="highlight">重难点</span>：必须同时评估议题对企业的财务影响 + 企业经营对外部环境/社会的影响。</p>
+    <p><strong>识别流程</strong>：内外部调研构建议题库 → 双重重要性分析 → 优先级排序（重要性矩阵）→ 董事会审阅确认。</p>
+    <p><strong>四要素披露框架</strong>：治理 – 战略 – 影响/风险/机遇管理 – 指标与目标（行业必循）。</p>
+    <table>
+        <thead><tr><th>要素</th><th>核心要求</th></tr></thead>
+        <tbody>
+            <tr><td>治理</td><td>披露ESG治理架构、职责、内控机制</td></tr>
+            <tr><td>战略</td><td>ESG如何嵌入业务战略、价值链影响</td></tr>
+            <tr><td>影响/风险/机遇管理</td><td>识别评估流程，与ERM衔接</td></tr>
+            <tr><td>指标与目标</td><td>关键KPIs及定量目标，进度跟踪</td></tr>
+        </tbody>
+    </table>
+    <p><span class="highlight">典型违规案例</span>：某农牧公司报告声称环保合规，但子公司因逃避监管排污被罚；某新能源车企“电池回收率95%”数据造假，被上交所通报批评。➡️ 合规启示：“及时、真实、完整”底线，重大环境事件2日内披露，数据须可验证。</p>
+    <p><strong>高质量披露要点</strong>：数据闭环（来源可溯、核算统一）、治理留痕（会议纪要完整）、负面客观披露并闭环整改、目标动态调整。</p>
+    <h4>三种信披实战模式</h4>
+    <div class="grid-models">
+        <div class="model-card"><strong>模式一：法务合规部牵头</strong><br>合规总监负责，风险意识强，但E/S技术细节能力依赖跨部门。</div>
+        <div class="model-card"><strong>模式二：战略部牵头+合规嵌入式</strong><br>战略高度够，设ESG数据中台，成本较高但质量统一。</div>
+        <div class="model-card"><strong>模式三：董办直接负责</strong><br>响应监管最快，需董事长授权董秘信披否决权。</div>
+    </div>
+    <p><span class="highlight">3+2能力模型</span>：硬技能（监管规则解读、数据治理、风险识别）➕ 软技能（跨部门影响力、利益相关方沟通）。</p>
+
+    <h3>🔹 4.2 ESG治理</h3>
+    <p><strong>治理架构关键角色</strong>：董事会ESG委员会（审批战略、监督目标）→ 管理层ESG执行委员会 → ESG合规官（核验数据、处理问询）→ ESG内部审计（审计目标合理性及风险完整性）。</p>
+    <table>
+        <thead><tr><th>要素</th><th>实务要点</th></tr></thead>
+        <tbody>
+            <tr><td>治理结构</td><td>设立ESG委员会，明确董事会职责；任命ESG专业独立董事。</td></tr>
+            <tr><td>治理流程</td><td>实质性议题识别、ESG KPI与财务KPI同步考核。</td></tr>
+            <tr><td>风险与合规</td><td>将ESG纳入整体风控，定期开展气候与供应链合规审计。</td></tr>
+            <tr><td>文件体系</td><td>《ESG治理政策》《ESG风险管理办法》《ESG数据管理办法》三大支柱。</td></tr>
+        </tbody>
+    </table>
+    <p><span class="highlight">正反面案例</span>：三峡国际搭建“ESG三层治理架构”，将ESG纳入经理层绩效考核，成效显著。反面：始祖鸟“炸山”事件（重评级轻实质，未将子品牌营销纳入审查）；同仁堂品牌授权失控，治理形同虚设。</p>
+    <div class="card-note">
+        💡 不要“唯标准论”“唯报告论”“唯外部论”——ESG核心是治理，失效的治理比不披露更危险。
+    </div>
+
+    <h3>🔹 4.3 数据安全 · ESG新核心议题</h3>
+    <p><strong>法律三驾马车</strong>：《网络安全法》《数据安全法》《个人信息保护法》；最新《网络数据安全管理条例》明确“重要数据”识别标准；《个人信息保护合规审计管理办法》使合规审计成为法定义务。<span class="highlight">执法警示</span>：某股份制银行因未落实数据分类分级被罚430万元；上海首例数据出境处罚——跨国零售企业违规传输超100万人个人信息至境外，被责令整改并处罚。</p>
+    <p><strong>数据安全制度建设“三步曲”</strong>：识数（资产盘点、分类分级）→ 定规（总则+专项管理办法）→ 落地（加密、脱敏、DLP、最小权限）。</p>
+    <p><strong>数据出境三条路径</strong>：①安全评估（CIIO或处理100万人以上信息等必须）②个人信息保护认证 ③订立标准合同。<span class="highlight">网信审查核心：合法性、正当性、必要性，境外接收方安全能力及法律环境。</span></p>
+    <p>ESG报告数据安全指标须自动化采集验证，杜绝手动填报失真风险。出海企业面临欧盟GDPR等双向合规压力（如TikTok欧盟用户数据争议）。</p>
+
+    <h3>🔹 4.4 环境合规</h3>
+    <p><span class="highlight">“史上最严”监管态势</span>：2015年新《环保法》实施按日连续处罚、查封扣押、移送拘留、环境公益诉讼、污染环境罪入刑。监管主体扩展至检察院、环保督察、社会组织、公众举报。</p>
+    <p><strong>生态环境法典展望</strong>：草案共五编1188条，将10部现行环保法律全部纳入，并纳入双碳、绿色低碳发展原则性规定。</p>
+    <p><strong>环境合规九大重点领域</strong>：环评、排污许可管理、排污行为管理、固废危废管理、土壤与地下水、环境自行监测、辐射安全、突发事件应急、环境信息公开。<br>
+    <span class="highlight">重点解析</span>：严禁监测数据造假（《生态环境监测条例》2026年施行，单位最高罚100万，责任人罚款+停产）；固废全流程可追溯；排污行为必须浓度/总量双控，参考指导案例130号（重庆藏金阁案）。</p>
+    <p><strong>合规落地指南</strong>：建立内部环境管理体系，开展环保合规审查，员工培训常态化，引入第三方尽调（陆家嘴百亿毒地案警示尽职调查缺失）。</p>
+
+    <h3>🔹 4.5 安全生产合规</h3>
+    <p><strong>海因里希法则</strong>：300:29:1（重大事故背后有大量隐患和轻微事故）。<span class="highlight">核心原则</span>：“三管三必须”（管行业、管业务、管生产经营必须管安全），双罚制（单位+个人），行刑衔接（危害公共安全罪）。《危险化学品安全法》（127条）突出全链条治理，提高处罚额度，重大危险源从严管控。</p>
+    <p><strong>典型警示案例</strong>：天津某电子公司未定期安全评价被罚9万；中国黄金集团内蒙古矿业隐患排查流于形式导致6死事故，多人刑责；天嘉宜特大爆炸（78死）总经理等44人被追刑责；安阳凯信达火灾（42死）消防设施失效，8人刑责。➡️ 本质安全提升+数字化非现场监管成为趋势。</p>
+    <p><strong>合规体系构建</strong>：设置安管机构与专职人员，完善安全生产责任制，风险识别→制度建立→培训教育→监督检查→持续改进闭环。</p>
+
+    <h2>五、合规落地整体框架总结</h2>
+    <div class="card-note">
+        ✅ 整合建议：① 数据治理打破孤岛，实现业财碳数据联动；② 将ESG融入“三重一大”决策机制，董事会定期审议；③ 建立“负面事件闭环整改”机制，杜绝漂绿；④ 数据出境合规提前自查；⑤ 环境与安全生产开展年度合规审计；⑥ 主动对标交易所编制指南，双重重要性矩阵实质化。
+    </div>
+    <p><strong>核心底线提醒：</strong> ESG信披的及时真实完整、治理架构实质化、数据安全分类分级出境合规、环境合规排污许可与监测真实、安全生产“隐患即事故”理念。上述领域已成监管“风暴眼”，企业必须从“被动合规”升级为“主动治理”。</p>
+
+    <footer>基于《国内ESG合规全景攻略》完整内容整理 | 仅用作专题学习与内部合规参考，保持原结构无虚构</footer>
+</div>
+
+<script>
+    // 生成基于当前页面结构的 Markdown 内容 (忠实于原框架及表格)
+    function generateMarkdown() {
+        let md = `# 国内ESG合规全景攻坚 · 专题框架总结\n\n`;
+        md += `> 基于《国内ESG合规全景攻略》完整讲义整理，保持原内容结构，标注重难点。\n\n`;
+        md += `## 一、课程背景与总体目标\n`;
+        md += `- **ESG合规重要性**：影响企业声誉与股价，企业普遍存在误解与合规缺口。目标明确：**“避免踩雷”**，聚焦红线识别与风险制度。\n\n`;
+        md += `## 二、国内ESG监管格局\n`;
+        md += `- 多头协同监管体系：证监会、交易所、生态环境部、财政部、央行、国资委等协调推进。\n`;
+        md += `- 强制信息披露：沪深交易所要求指数成分股及双重上市公司2026年前披露可持续发展报告（覆盖市值超51%）。\n`;
+        md += `- 监管趋势：自愿→半强制，跨部门联动审查，数据真实性强化，绿色贷款余额突破35.75万亿。\n\n`;
+        md += `### 监管分工简表\n`;
+        md += `| 监管定位 | 主要部门 | 典型政策/行动 |\n`;
+        md += `|---------|----------|----------------|\n`;
+        md += `| 顶层设计 | 国务院、发改委 | “双碳”目标写入国家战略 |\n`;
+        md += `| 信披规则 | 证监会、交易所 | 《可持续发展报告指引》《编制指南》 |\n`;
+        md += `| 绿色金融 | 央行、银保监会 | 金融支持绿色低碳发展指导意见 |\n`;
+        md += `| 环境执法 | 生态环境部 | 《企业环境信息依法披露管理办法》 |\n`;
+        md += `| 央企示范 | 国资委 | 《央企ESG指导意见》及专项报告体系 |\n\n`;
+        md += `## 三、监管重点与企业痛点\n`;
+        md += `- 核心痛点：数据孤岛、漂绿风险、ESG与原有合规体系割裂。\n`;
+        md += `- 重点监管对象：A股成分股（★★★★☆）、央企（★★★★★）、重点排污单位（★★★★☆）。\n\n`;
+        md += `## 四、ESG强合规领域五大板块\n`;
+        md += `### 1. ESG信息披露\n`;
+        md += `- 三大里程碑（基本准则→交易所指引→编制指南）；**双重重要性**（财务+影响）；四要素披露框架（治理-战略-风险/机遇管理-指标目标）。\n`;
+        md += `- 典型违规：某农牧公司环保处罚与报告不符、新能源车企电池回收率虚假记载 → 底线：及时、真实、完整披露。\n`;
+        md += `- 高质量披露关键：数据闭环、治理留痕、负面闭环整改、目标动态透明。\n\n`;
+        md += `### 2. ESG治理\n`;
+        md += `- 架构：董事会ESG委员会 → 管理层执行委员会 → ESG合规官 → ESG内审。三大制度文件。\n`;
+        md += `- 反面案例：始祖鸟“炸山”（治理缺位）、同仁堂品牌授权失控 → 避免唯标准/唯报告论。\n\n`;
+        md += `### 3. 数据安全\n`;
+        md += `- 三驾马车：网络安全法、数据安全法、个保法。重要数据分类分级，合规审计法定义务。\n`;
+        md += `- 数据出境三条合规路径（安全评估/认证/标准合同），触发条件（处理100万人以上或累计出境10万人个人信息等）。\n`;
+        md += `- 警示案例：跨国零售企业因未履行出境安全评估被行政处罚；金融行业因数据分类分级不到位重罚。\n\n`;
+        md += `### 4. 环境合规\n`;
+        md += `- “史上最严”环保法：按日计罚、查封扣押、环境公益诉讼、刑事责任。生态环境法典编纂在即。\n`;
+        md += `- 九大重点领域（环评、排污许可、固废危废、自行监测等）；严禁监测数据造假（2026年条例施行，最高罚100万）。\n`;
+        md += `- 落地措施：内部管理体系+合规审查+员工培训。\n\n`;
+        md += `### 5. 安全生产合规\n`;
+        md += `- 海因里希法则，三管三必须，双罚制，行刑衔接。\n`;
+        md += `- 《危险化学品安全法》全链条治理，重大危险源强化管控。\n`;
+        md += `- 典型案例：天嘉宜爆炸（78死）、安阳凯信达火灾（42死），隐患排查闭环缺失导致刑事责任。\n`;
+        md += `- 体系构建：设置安管机构、完善责任制度、风险识别、培训教育、监督检查、持续改进。\n\n`;
+        md += `## 五、整体合规建议\n`;
+        md += `- 打破数据孤岛，将ESG融入“三重一大”决策；\n`;
+        md += `- 建立漂绿预防机制与负面事件闭环整改；\n`;
+        md += `- 提前开展数据出境自评与环境合规审计；\n`;
+        md += `- 董事会定期审议ESG风险与目标进展；\n`;
+        md += `- 安全生产从被动合规转向主动创安，应用数字化精准监管。\n\n`;
+        md += `---\n*本总结基于《国内ESG合规全景攻略》原始内容，未虚构，框架及重难点均源于原课程讲义。*`;
+        return md;
+    }
+
+    const downloadBtn = document.getElementById('downloadMarkdownBtn');
+    downloadBtn.addEventListener('click', () => {
+        const markdownContent = generateMarkdown();
+        const blob = new Blob([markdownContent], { type: 'text/markdown' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'ESG_Compliance_Summary.md';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
+</script>
+</body>
+</html>

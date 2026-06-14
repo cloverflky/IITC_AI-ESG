@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>新能源行业供应链尽职调查实操速通 | 课程总结</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f0f5f9;
+            color: #1a2a3a;
+            padding: 2rem 1rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 2rem 1.8rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1E6F3F, #0F4C2D);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+            border-left: 5px solid #1E6F3F;
+            padding-left: 1.2rem;
+        }
+
+        .subhead {
+            color: #2c5a3b;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            border-bottom: 2px solid #cbdde6;
+            padding-bottom: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .btn-download {
+            background-color: #1E6F3F;
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .btn-download:hover {
+            background-color: #0e542f;
+            transform: translateY(-1px);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #c3d9e8;
+            color: #1e4663;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.8rem 0;
+            color: #1f6392;
+            background: #eef4fa;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            margin: 1.2rem 0 0.5rem;
+            color: #2c5a6e;
+            border-left: 4px solid #2c7a4d;
+            padding-left: 12px;
+        }
+
+        .highlight {
+            background: #f9efaa;
+            padding: 0 4px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #5a3e0b;
+        }
+
+        .badge-critical {
+            background: #e75a5a;
+            color: white;
+            font-size: 0.7rem;
+            border-radius: 20px;
+            padding: 2px 8px;
+            margin-left: 10px;
+            vertical-align: middle;
+            font-weight: normal;
+        }
+
+        .note-box {
+            background: #eef2fa;
+            border-left: 5px solid #1E6F3F;
+            padding: 0.8rem 1.2rem;
+            margin: 1rem 0;
+            border-radius: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            font-size: 0.9rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        th {
+            background-color: #d9e9f2;
+            color: #1d4e6e;
+            padding: 10px 8px;
+            border: 1px solid #bdd4e2;
+            font-weight: 700;
+        }
+
+        td {
+            border: 1px solid #cbdbe2;
+            padding: 8px 10px;
+            vertical-align: top;
+            background-color: #fff;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #fafcfe;
+        }
+
+        .risk-matrix th, .risk-matrix td {
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #7a8e9b;
+            border-top: 1px solid #dce5ec;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 1.2rem;
+            }
+            table {
+                font-size: 0.8rem;
+            }
+            th, td {
+                padding: 5px;
+            }
+        }
+        .strong-text {
+            font-weight: 700;
+            color: #075a2b;
+        }
+        .underline-orange {
+            text-decoration: underline;
+            text-decoration-color: #f3b33d;
+            text-underline-offset: 4px;
+        }
+    </style>
+    <!-- Turndown 库: 用于 HTML 转 Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/turndown@7.1.2/dist/turndown.js"></script>
+</head>
+<body>
+<div class="container" id="summaryContent">
+    <h1>🔋 新能源行业供应链尽职调查<br>实操速通 · 知识点精析</h1>
+    <div class="subhead">
+        <span>讲师：葛莹 | 基于OECD六步法 & 欧盟CSDDD/CBAM等实战框架</span>
+        <button class="btn-download" id="downloadMarkdownBtn">📥 下载 Markdown 笔记</button>
+    </div>
+
+    <!-- ========= 一、专题框架总览 ========= -->
+    <h2>📌 一、专题框架总览</h2>
+    <div class="note-box">
+        <p><span class="strong-text">核心脉络</span>：<strong>ESG尽职调查实务框架</strong> → <strong>新能源行业全流程实操步骤（OECD六步法落地）</strong> → <strong>供应链深度案例（光伏电池供应商）</strong> → <strong>实战启示</strong>。<br>
+        重点覆盖：尽职调查定义及应用场景、ESG内容议题、OECD六步方法论、融入管理体系、风险识别四大维度、风险等级矩阵、财务量化、合同条款设计、跟踪沟通及补救机制。</p>
+        <p>⭐ <span class="highlight">重难点</span>：OECD六步环环相扣、风险矩阵(可能性/严重性)量化排序、供应链强迫劳动/碳关税的应对、合同保证条款设计、整改计划闭环。</p>
+    </div>
+
+    <!-- ========= 二、按专题框架知识点总结 ========= -->
+    <h2>📘 二、按专题框架知识点总结</h2>
+
+    <!-- 第一部分：ESG尽职调查实务框架与核心内容 -->
+    <h3>🔹 模块一：ESG尽职调查实务框架与核心内容</h3>
+    <h4>1. 尽职调查定义与作用</h4>
+    <p><strong>定义</strong>：企业在重大交易/合作前，对目标对象全面、系统深入的调查分析，揭示潜在风险、评估价值。<br>
+    <strong>核心作用</strong>：规避信息不对称风险，防止错误决策；不仅是交易前估值，更是持续提升企业表现的工具。<br>
+    <strong>传统维度+ESG</strong>：财务尽调 + 法务尽调 + 市场尽调 → 延伸出 <span class="highlight">ESG尽职调查</span>（环境、社会、治理）。</p>
+
+    <h4>2. 四大应用场景与关注点</h4>
+    <table>
+        <thead><tr><th>场景类型</th><th>核心关注点</th><th>典型用途</th></tr></thead>
+        <tbody>
+            <tr><td>企业尽职调查</td><td>战略、管理与文化，整体ESG声誉</td><td>并购交易、股权投资</td></tr>
+            <tr><td>生产设施尽调</td><td>具体运营、排放、社区影响、职业健康安全</td><td>资产收购、运营风控</td></tr>
+            <tr><td>资产尽职调查</td><td>物理风险、转型风险、碳成本、绿色认证</td><td>基础设施投资、房地产收购</td></tr>
+            <tr><td><span class="highlight">供应链ESG尽调</span></td><td>多级供应链合规性、标准传递、系统性与声誉风险</td><td>供应商准入/分级/穿透溯源</td></tr>
+        </tbody>
+    </table>
+    <p>💡 <span class="highlight">重难点</span>：ESG尽调议题需根据调查对象灵活调整（如碳排放、劳工权益、生物多样性等）。</p>
+
+    <h4>3. ESG尽职调查核心议题清单</h4>
+    <p><strong>环境(E)</strong>：气候变化/碳排放、污染(土壤/水/噪声)、废弃物(废气/废水/危废)、生物多样性/水资源。<br>
+    <strong>社会(S)</strong>：员工与劳工权益(薪酬/福利/合规用工)、职业健康安全(工伤/培训)、供应链管理、利益相关方(产品质量/社区/公益)。<br>
+    <strong>治理(G)</strong>：公司治理结构(董事会多元性)、反腐败反贿赂、风险管理(ESG信息披露真实性)、商业道德(公平竞争/反垄断)。</p>
+
+    <h4>4. OECD尽职调查六步流程（全球基准方法论）</h4>
+    <div class="note-box">
+        <p>1️⃣ <strong>将负责任商业行为融入政策与管理体系</strong><br>
+        2️⃣ <strong>识别与评估运营、供应链和业务关系中的不利影响</strong><br>
+        3️⃣ <strong>终止、防范或减轻不利影响</strong><br>
+        4️⃣ <strong>跟踪实施情况与结果</strong><br>
+        5️⃣ <strong>沟通如何消除影响</strong><br>
+        6️⃣ <strong>适时提供条件或开展合作进行补救</strong><br>
+        ⭐ 该框架被欧盟CSDDD、OECD跨国企业准则采纳，是法律及合规基石。</p>
+    </div>
+
+    <!-- 第二部分：新能源行业全流程实操案例 -->
+    <h3>🔹 模块二：新能源行业ESG尽职调查全流程实操（光伏电池供应商案例）</h3>
+    <h4>📌 案例背景：A企业（光伏组件制造商）</h4>
+    <p>主营业务：高效光伏组件研发生产销售。对现有电池供应商开展供应链ESG尽调，受海外法规压力：<strong>欧盟CBAM、美国UFLPA、欧盟CSDDD</strong>。A企业承诺2030运营碳中和、2050全价值链碳中和，使用OECD六步法。</p>
+
+    <h4>✅ 步骤① 将负责任商业行为融入政策与管理</h4>
+    <p><span class="highlight">重难点</span>：没有融入就没有执行。必须建立制度、组织架构与流程嵌入。</p>
+    <ul>
+        <li><strong>政策制定</strong>：发布《供应商ESG行为准则》，写入合同（含碳足迹披露、强迫劳动零容忍）。</li>
+        <li><strong>组织架构</strong>：跨部门工作组（采购/法务/EHS/可持续发展），明确职责。</li>
+        <li><strong>流程嵌入</strong>：供应商准入、绩效考核、采购决策全流程纳入ESG评估。配备预算和人力。</li>
+        <li><strong>目标</strong>：推动供应商建立ESG管理体系，出具ESG整改计划及时间表。</li>
+    </ul>
+
+    <h4>⚠️ 步骤② 识别与评估风险（核心实务）</h4>
+    <p><strong>重大案例警示</strong>：亿纬锂能供应商兴华锂盐非法掩埋危废事件，多次环保处罚但未被及时识别，强调<span class="highlight">穿透式风险识别重要性</span>。</p>
+    <p><strong>四大维度风险识别表（光伏电池行业）</strong></p>
+    <table>
+        <thead><tr><th>维度</th><th>关注点</th><th>光伏行业应用示例</th></tr></thead>
+        <tbody>
+            <tr><td>地理位置风险</td><td>政治稳定性/劳工权益/环保执法/腐败指数</td><td>多晶硅产地（新疆）强迫劳动风险；东南亚劳工风险；中国西部水资源压力</td></tr>
+            <tr><td>行业固有风险</td><td>高能耗、化学品使用、重金属排放、劳动密集型</td><td>电池片高毒化学品(氢氟酸/硅烷)；多晶硅高碳排放；逆变器稀土矿产</td></tr>
+            <tr><td>产品与材料风险</td><td>冲突矿产、受控物质、稀缺资源</td><td>焊料含锡/钽/钨/金；钴/锂储能；银浆电极</td></tr>
+            <tr><td>供应商画像风险</td><td>规模/成立时间/历史处罚/ESG评级</td><td>中小企业ESG能力弱；历史环保处罚为关键红线</td></tr>
+        </tbody>
+    </table>
+    <p><strong>信息收集方法</strong>：桌面筛查(ESG报告/年报/处罚记录)+ 问卷调查+ 第三方数据+ <span class="highlight">现场审核(重中之重)</span>。</p>
+    
+    <h4>🔎 某电池供应商风险筛查实例（发现项摘要）</h4>
+    <table>
+        <thead><tr><th>维度</th><th>具体风险发现</th></tr></thead>
+        <tbody>
+            <tr><td>地理位置</td><td>长三角地区环保执法偏严，2022年因环保问题被罚</td></tr>
+            <tr><td>行业固有</td><td>涉及氢氟酸等危化品，高能耗高水耗，劳动密集型</td></tr>
+            <tr><td>产品材料</td><td>硅片需追溯多晶硅来源，银浆含银，焊料含锡/铅风险</td></tr>
+            <tr><td>供应商画像</td><td>员工2500人，2022年环保处罚，未发布ESG报告</td></tr>
+        </tbody>
+    </table>
+    <p><strong>具体风险（环境/社会/治理）</strong><br>
+    🌱 环境：历史废水pH超标罚款15万元；碳足迹未披露范围3；危化品管理待现场核实。<br>
+    👥 社会：两起未决劳动争议（加班费）；多晶硅来源不明(UFLPA风险)；员工访谈需验证加班&社保。<br>
+    🏛 治理：董事会结构单一（仅2名独立董事，无女性）；ESG管理体系缺失；处罚暴露管理缺陷。</p>
+
+    <h4>📊 风险等级矩阵（可能性 × 严重性）—— 重难点工具</h4>
+    <table class="risk-matrix">
+        <thead><tr><th>严重性/可能性</th><th>低可能性</th><th>中可能性</th><th>高可能性</th><th>应对策略导向</th></tr></thead>
+        <tbody>
+            <tr><td>高严重性</td><td>优先监控</td><td>紧急应对</td><td style="background:#ffe0e0;">一票否决</td><td>高风险必须立即行动，终止合作或彻底解决</td></tr>
+            <tr><td>中严重性</td><td>定期跟踪</td><td>重点关注</td><td>优先应对</td><td>要求供应商整改后重新谈判</td></tr>
+            <tr><td>低严重性</td><td>接受/忽略</td><td>一般关注</td><td>常规处理</td><td>无法消除则设中止条件</td></tr>
+        </tbody>
+    </table>
+    <p>定义依据：可能性(历史前科/行业通病/地理位置/管理成熟度)；严重性(财务/声誉/法律/运营影响)。</p>
+
+    <h4>🛠 步骤③ 消除、预防或减缓影响 —— 转化为合同+财务量化</h4>
+    <p><strong>优先级应对策略实例（电池供应商）</strong></p>
+    <table>
+        <thead><tr><th>风险点</th><th>优先级</th><th>应对措施</th></tr></thead>
+        <tbody>
+            <tr><td>多晶硅来源涉新疆</td><td>一票否决</td><td>立即追溯上游，如无法提供完整供应链证明与强迫劳动无关，则终止合作</td></tr>
+            <tr><td>历史土壤污染可能</td><td>紧急应对</td><td>聘请环境工程师评估土壤污染，估算修复成本</td></tr>
+            <tr><td>碳足迹不达标/CBAM</td><td>紧急应对</td><td>要求披露碳足迹，评估碳关税成本影响</td></tr>
+            <tr><td>化学品管理缺陷</td><td>重点关注</td><td>现场核查，纳入整改计划</td></tr>
+            <tr><td>两起劳动争议</td><td>重点关注</td><td>评估潜在赔偿，跟踪司法进程</td></tr>
+            <tr><td>ESG管理体系缺失</td><td>常规处理</td><td>继续合作后建立体系，发布ESG报告</td></tr>
+        </tbody>
+    </table>
+    <p><strong>📉 财务影响量化表（示例估算）</strong></p>
+    <table>
+        <thead><tr><th>风险类型</th><th>潜在财务影响</th><th>量化范围（参考）</th></tr></thead>
+        <tbody>
+            <tr><td>土壤污染修复</td><td>修复成本+罚款+运营中断</td><td>500万-2000万元</td></tr>
+            <tr><td>CBAM碳关税</td><td>组件出口欧盟额外成本</td><td>约1600万元（视碳排放）</td></tr>
+            <tr><td>劳动争议赔偿</td><td>补发工资及赔偿金</td><td>20万-50万元</td></tr>
+            <tr><td>环保整改</td><td>废水升级+危废处置</td><td>100万-300万元</td></tr>
+        </tbody>
+    </table>
+    <p><strong>✍️ 合同条款设计（嵌入ESG约束）</strong></p>
+    <table>
+        <thead><tr><th>条款类型</th><th>内容应用</th></tr></thead>
+        <tbody>
+            <tr><td>保证与赔偿条款</td><td>供应商对已识别/未知ESG问题提供保证，赔偿我方损失，赔偿期3年</td></tr>
+            <tr><td>合同条件（先决条件）</td><td>完成多晶硅来源追溯+第三方人权审计，作为继续合作前提</td></tr>
+            <tr><td>交割后整改承诺</td><td>供应商6个月内建立ESG管理体系，12个月内发布首份ESG报告</td></tr>
+        </tbody>
+    </table>
+    <p><strong>ESG 100天整合计划里程碑</strong>：30天差距分析 → 100天完成环境合规核查及管理架构 → 1年碳足迹核算+减排+ESG报告。</p>
+
+    <h4>📈 步骤④ 跟踪执行与结果</h4>
+    <p>避免虎头蛇尾：通过内/第三方审查验证措施有效性，建立ESG KPI并挂钩管理层薪酬，定期评估业务关系，听取工人/工会反馈，将经验回馈尽调流程。</p>
+
+    <h4>📢 步骤⑤ 信息沟通与披露</h4>
+    <p>对内：董事会/管理层汇报；对外：发布ESG报告、官网披露重大风险领域及已采取行动。保持透明度，适当考虑商业机密，向受影响权利主体沟通。</p>
+
+    <h4>⚖️ 步骤⑥ 提供补救措施</h4>
+    <p>若造成实际伤害需道歉、恢复原状、经济补偿、制度性改革。建立申诉机制，与工会/NGO合作设计补救方案。<span class="highlight">重难点</span>：人权与环境损害的有效补救需系统性响应。</p>
+
+    <h3>💡 模块三：启示与关键成功要素</h3>
+    <div class="note-box">
+        <ul>
+            <li>ESG尽调提供可追溯、可辩护的系统方法，从“文件审查”走向“现场验证”，从“风险识别”走向“合同条款”。</li>
+            <li>善用专才，内部资源不足时寻求外部顾问支持（如法律、环境工程）。</li>
+            <li>规划清晰整改计划（时间表/责任人），持续提升供应商ESG表现。</li>
+            <li>密切关注全球法规动态：CSDDD、CBAM、UFLPA以及OECD指南更新。</li>
+        </ul>
+    </div>
+
+    <!-- ========= 补充重要表格汇总 ========= -->
+    <h2>📑 三、关键工具与表格速览（重难点集成）</h2>
+    <h4>📌 风险等级评估依据</h4>
+    <table>
+        <thead><tr><th>维度</th><th>评估依据</th></tr></thead>
+        <tbody>
+            <tr><td>可能性</td><td>供应商历史前科、行业普遍性、地理位置风险区、管理成熟度</td></tr>
+            <tr><td>严重性</td><td>财务影响(修复/罚款)、声誉损害、法律刑事责任、运营中断</td></tr>
+        </tbody>
+    </table>
+    <h4>📌 OECD六步骤与日常管理映射</h4>
+    <table>
+        <thead><tr><th>步骤</th><th>企业关键行动</th></tr></thead>
+        <tbody>
+            <tr><td>1.融入政策</td><td>供应商行为准则+合同约束+跨部门治理</td></tr>
+            <tr><td>2.识别评估</td><td>四大维度风险排查+现场审核+风险矩阵排序</td></tr>
+            <tr><td>3.防范减缓</td><td>整改计划+合同条款+财务量化和终止条件</td></tr>
+            <tr><td>4.跟踪结果</td><td>KPI考核+定期第三方审查+管理层挂钩</td></tr>
+            <tr><td>5.沟通披露</td><td>ESG报告+官网披露+利益相关方对话</td></tr>
+            <tr><td>6.补救机制</td><td>申诉渠道+经济赔偿+制度性改革</td></tr>
+        </tbody>
+    </table>
+
+    <div class="note-box" style="background: #e8f3e8;">
+        <p>⭐ <span class="highlight">核心重难点总结</span>：① 风险识别阶段的地理位置+产品溯源（尤其涉疆、冲突矿产） ② 风险矩阵如何将ESG问题量化并排序优先级 ③ 将无形ESG风险转化为合同赔偿/保证条款的谈判能力 ④ 六步闭环中的“融入”与“跟踪”往往最薄弱，但决定尽调成败 ⑤ 现场验证（员工访谈/危化品核查）远高于桌面问卷价值。</p>
+    </div>
+
+    <footer>依据《新能源行业供应链尽职调查实操速通》课程整理（讲师：葛莹）| 内容忠实原讲义结构，包含OECD框架与案例实战 | 重难点已用高亮标注</footer>
+</div>
+
+<script>
+    (function() {
+        const downloadBtn = document.getElementById('downloadMarkdownBtn');
+        if (!downloadBtn) return;
+
+        // 获取要转换的DOM元素（整个总结内容容器，保留完整知识点）
+        const contentElement = document.getElementById('summaryContent');
+        
+        downloadBtn.addEventListener('click', function() {
+            // 克隆节点，避免影响页面显示，同时复制样式相关的处理（turndown会保留基本md）
+            const cloneContent = contentElement.cloneNode(true);
+            // 移除按钮本身的复制可能导致的交互元素? 但保留下载按钮克隆无妨，但是转换时去除下载按钮区域? 为了整洁，将克隆里的下载按钮父级移除按钮自身
+            const btnInClone = cloneContent.querySelector('.btn-download');
+            if (btnInClone) btnInClone.remove();
+            // 也移除可能多余的 footer 里的按钮？无碍，但保证干净
+            const htmlString = cloneContent.outerHTML;
+            
+            // 初始化 Turndown，配置支持表格
+            const turndownService = new TurndownService({
+                headingStyle: 'atx',
+                codeBlockStyle: 'fenced',
+                emDelimiter: '*'
+            });
+            // 添加表格支持 (turndown-plugin-gfm? 但turndown原生支持表格，需加gfm)
+            // 确保表格转换时保留边框样式
+            turndownService.addRule('taskListItems', {
+                filter: 'input',
+                replacement: function(content, node) {
+                    return (node.checked ? '[x]' : '[ ]') + ' ';
+                }
+            });
+            // 转换html为markdown
+            let markdown = turndownService.turndown(htmlString);
+            // 增加头部信息，优化可读性
+            const header = `# 新能源行业供应链尽职调查实操速通 · 完整知识点总结\n\n> 基于ESG尽职调查实务框架与OECD六步法 | 生成时间: ${new Date().toLocaleString()}\n\n`;
+            markdown = header + markdown;
+            
+            // 创建下载blob
+            const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.href = url;
+            link.download = '新能源供应链尽职调查_知识总结.md';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        });
+    })();
+</script>
+</body>
+</html>

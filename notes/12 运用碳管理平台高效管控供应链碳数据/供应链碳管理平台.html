@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>供应链碳管理平台 | 专题知识总结</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f7f0;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            color: #1a2c1e;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 32, 0, 0.15);
+            overflow: hidden;
+            padding: 2rem 2rem 3rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            border-left: 8px solid #2c7a3e;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #1b4d1f;
+        }
+
+        .sub {
+            color: #4a6741;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #cfe3cf;
+            padding-bottom: 0.75rem;
+        }
+
+        .framework {
+            background: #eef5e9;
+            padding: 1.2rem 1.8rem;
+            border-radius: 1.5rem;
+            margin: 1.8rem 0 2rem 0;
+            box-shadow: inset 0 1px 2px #fff8, 0 4px 8px rgba(0,0,0,0.02);
+        }
+
+        .framework h2 {
+            font-size: 1.5rem;
+            color: #235b2a;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .grid-framework {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .pill {
+            background: white;
+            border-radius: 40px;
+            padding: 0.4rem 1.2rem;
+            font-weight: 600;
+            color: #1d6324;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #cde2cd;
+        }
+
+        .section {
+            margin: 2.5rem 0 2rem;
+            scroll-margin-top: 1rem;
+        }
+
+        .section h3 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #e9f5e6, #ffffff);
+            padding: 0.6rem 1rem;
+            border-radius: 1.2rem;
+            color: #1b5e2a;
+            border-left: 6px solid #3b9e4b;
+            margin-bottom: 1.2rem;
+        }
+
+        .card {
+            background: #fefef7;
+            border-radius: 1.2rem;
+            padding: 1rem 1.4rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0,0,0,0.05);
+            border: 1px solid #e0ecd9;
+        }
+
+        .highlight {
+            background: #fff1c1;
+            padding: 0.1rem 0.3rem;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #8a6300;
+        }
+
+        .badge {
+            background: #2c7a3e;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            display: inline-block;
+            margin-right: 0.6rem;
+            vertical-align: middle;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            font-size: 0.9rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        th {
+            background: #d9e8d4;
+            padding: 10px 8px;
+            border: 1px solid #bdd6b3;
+            font-weight: 700;
+        }
+
+        td {
+            border: 1px solid #cfdec8;
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        .formula {
+            background: #f2f6ef;
+            font-family: 'Courier New', monospace;
+            padding: 0.8rem 1rem;
+            border-radius: 1rem;
+            border-left: 5px solid #3b9e4b;
+            margin: 1rem 0;
+            font-weight: 500;
+        }
+
+        .note {
+            background: #e9f2e6;
+            padding: 0.8rem 1.2rem;
+            border-radius: 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .btn-download {
+            background: #1c5827;
+            border: none;
+            color: white;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s;
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-download:hover {
+            background: #0e401a;
+            transform: translateY(-1px);
+        }
+
+        footer {
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #5a7c50;
+            border-top: 1px solid #ddecd5;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 1.2rem;
+            }
+            th, td {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🌿 供应链碳管理平台 · 专题全景总结</h1>
+    <div class="sub">基于国际核算体系 + 企业碳数据治理 + 全价值链减排实践</div>
+
+    <!-- 专题框架总览 -->
+    <div class="framework">
+        <h2>📌 专题框架总览</h2>
+        <div class="grid-framework">
+            <span class="pill">01 碳核算方法解析</span>
+            <span class="pill">02 企业碳数据管理</span>
+            <span class="pill">03 案例与实操（电梯LCA）</span>
+            <span class="pill">04 供应链碳贡献分析</span>
+            <span class="pill">05 供应链数据共建与减排决策</span>
+            <span class="pill">➕ 导论 · 政策/ESG驱动力</span>
+        </div>
+        <p style="margin-top: 12px;">核心逻辑：<strong>标准体系→数据治理→量化核算→热点识别→共建协同→减排路径</strong>。聚焦范围三（价值链）难点，融合GHG Protocol、ISO 14064/14069、LCA方法论，以电梯制造场景贯穿实操。</p>
+    </div>
+
+    <!-- ================= 按框架分知识点总结 ================= -->
+
+    <!-- 1. 碳核算方法解析 -->
+    <div class="section">
+        <h3>🔬 01 碳核算方法解析</h3>
+        <div class="card">
+            <span class="badge">重难点</span> <strong>标准体系：GHG Protocol & ISO 14064/14067/14069</strong>
+            <ul style="margin-top: 8px; margin-left: 1.5rem;">
+                <li><strong>GHG Protocol</strong>：全球应用最广，《企业核算与报告标准》(范围一/二)，《产品生命周期核算标准》。</li>
+                <li><strong>ISO 14064系列</strong>：组织层级温室气体量化与报告。</li>
+                <li><strong>ISO 14067</strong>：产品碳足迹(基于LCA)。</li>
+                <li><span class="highlight">ISO 14069技术指南</span>：细化组织层面各类别间接排放（尤其类别9外购产品、类别18产品使用阶段等）。</li>
+            </ul>
+        </div>
+        <div class="card">
+            <span class="badge">核心概念</span> <strong>范围一、二、三排放边界</strong>
+            <table>
+                <thead><tr><th>排放范围</th><th>定义</th><th>典型来源</th></tr></thead>
+                <tbody>
+                    <tr><td>范围一 (直接)</td><td>自有/可控排放源</td><td>燃料燃烧、工艺过程、公司车辆</td></tr>
+                    <tr><td>范围二 (间接)</td><td>外购电力/热/蒸汽</td><td>电力消耗、外购蒸汽制冷</td></tr>
+                    <tr><td class="highlight">范围三 (价值链)</td><td>上下游其他间接排放</td><td>采购货物、物流运输、产品使用、废弃处理等15个类别</td></tr>
+                </tbody>
+            </table>
+            <div class="note">⚠️ <strong>重难点：范围三排放</strong> 占企业总排放80%以上，数据获取难度极大，涉及供应商协同、二次数据依赖、透明度低等问题。</div>
+        </div>
+        <div class="card">
+            <strong>📐 核算方法（排放因子法）与关键公式</strong>
+            <div class="formula">温室气体排放量 (tCO₂e) = 活动数据 (AD) × 排放因子 (EF)</div>
+            <p><strong>三种核算层级对比</strong>（GHG Protocol推荐）</p>
+            <table>
+                <tr><th>方法</th><th>公式示例</th><th>精度</th></tr>
+                <tr><td>支出法 (Spend-based)</td><td>采购金额(2600万元) × 数据库钢铁因子(0.15 tCO₂e/万元) = 390 tCO₂e</td><td>粗略</td></tr>
+                <tr><td>行业均值法 (Average-data)</td><td>混凝土用量45000吨 × 0.12 tCO₂e/吨 = 5400 tCO₂e</td><td>常用</td></tr>
+                <tr><td class="highlight">供应商实测法</td><td>电梯32台 × 供应商碳足迹18.5 tCO₂e/台 = 592 tCO₂e</td><td>最佳实践</td></tr>
+            </table>
+            <p>✅ 重难点：供应商实测法能反映真实减排差异，但需要供应链数据透明化，也是范围三核算升级方向。</p>
+        </div>
+        <div class="card">
+            <span class="badge">ISO 14069 关键类别详解</span>
+            <p><strong>类别9 – 外购产品</strong>：组织引入商品/服务上游排放，最佳情景采用精确实物数据(重量、体积)，实际可依据隐含排放或采购金额筛选。<br>
+            <strong>类别18 – 产品使用阶段</strong>：核算售出产品在消费者使用/加工阶段的预期总排放，需定义使用场景（如机动车燃油消耗），对“最终产品”制造商相对容易定义，钢铁等中间产品场景定义困难。</p>
+            <p><em>案例参考：电梯使用阶段(耗电)占产品全生命周期碳足迹主导地位。</em></p>
+        </div>
+        <div class="card">
+            <strong>♻️ 生命周期评价(LCA)框架</strong> (从摇篮到坟墓)
+            <ul><li>①目标与范围定义 (功能单位、系统边界)</li><li>②清单分析 (物料/能源输入输出)</li><li>③影响评估 (量化GWP等环境影响)</li><li>④结果解释 (热点识别 & 改进策略)</li></ul>
+            <p>常用于产品碳足迹与供应链热点识别。</p>
+        </div>
+    </div>
+
+    <!-- 2. 企业碳数据管理 -->
+    <div class="section">
+        <h3>📊 02 企业碳数据管理</h3>
+        <div class="card">
+            <strong>数据边界划定的四个维度</strong><br>
+            ▸ 功能单位 (如吨钢、kgCO₂/人·km)&nbsp;&nbsp;▸ 时间边界 (年度/项目周期)<br>
+            ▸ 地域边界 (工厂/集团)&nbsp;&nbsp;▸ <span class="highlight">价值链边界</span> (供应商生产/产品使用环节)
+        </div>
+        <div class="card">
+            <strong>碳数据类型与收集策略</strong>
+            <table>
+                <tr><th>数据类型</th><th>示例</th></tr>
+                <tr><td>燃料燃烧</td><td>燃煤供暖、工业窑炉</td></tr>
+                <tr><td>电力消耗</td><td>生产设备、空调照明</td></tr>
+                <tr><td>货物摇篮到大门</td><td>原材料采购、运输、生产消耗</td></tr>
+                <tr><td>组织碳绩效</td><td>碳排放总量/产值强度</td></tr>
+            </table>
+            <p>🔧 策略：自动化计量系统（智能电表、采购凭证）+ 供应商数据接口。</p>
+        </div>
+        <div class="card">
+            <span class="badge">数据质量四性（重难点）</span>
+            <ul><li><strong>可靠性</strong>：来源可信度，实测值>经验值</li><li><strong>完整性</strong>：覆盖全部活动类型与边界</li><li><strong>一致性</strong>：模型匹配生产流程，统一国际标准</li><li><strong>透明性</strong>：可追溯、可验证，假设合规有据可依</li></ul>
+            <div class="note">⚠️ 供应链碳核算当前主要挑战：核算指南不完善、排放因子数据库滞后、范围三数据获取困难、国际互认压力（CBAM等）。</div>
+        </div>
+    </div>
+
+    <!-- 3. 案例与实操 (电梯BOM表) -->
+    <div class="section">
+        <h3>🏭 03 案例与实操 · 电梯产品碳足迹</h3>
+        <div class="card">
+            <strong>📦 简化的电梯BOM表（摇篮到大门阶段数据）</strong>
+            <table style="font-size:0.8rem;">
+                <thead><tr><th>物料名称</th><th>消耗量</th><th>单位</th><th>运输距离(km)</th></tr></thead>
+                <tbody>
+                    <tr><td>钢材</td><td>4610</td><td>kg</td><td>300</td></tr>
+                    <tr><td>混凝土</td><td>1580</td><td>kg</td><td>100</td></tr>
+                    <tr><td>铝合金</td><td>52</td><td>kg</td><td>100</td></tr>
+                    <tr><td>印刷电路板(PCB)</td><td>1.4</td><td>kg</td><td>100</td></tr>
+                    <tr><td>焊接材料</td><td>15</td><td>kg</td><td>20</td></tr>
+                    <tr><td>包装木材/聚乙烯</td><td>84 / 18</td><td>kg</td><td>75</td></tr>
+                </tbody>
+            </table>
+            <p>分析边界：<strong>摇篮到坟墓</strong>（原材料→生产→运输→安装→使用20年→生命末期拆解回收）。功能单位：约5000 t·km；设计使用周期20年。</p>
+        </div>
+        <div class="card">
+            <span class="badge">实操启示</span> 使用阶段用电排放在电梯产品全生命周期占比极高，原材料生产次之；运输及末端处理贡献相对较小。为后续减排重点提供依据。
+        </div>
+    </div>
+
+    <!-- 4. 结果分析（供应链碳贡献） -->
+    <div class="section">
+        <h3>📈 04 供应链碳贡献分析</h3>
+        <div class="card">
+            <strong>⚡ 电梯产品碳排放贡献特征</strong><br>
+            → 基于LCA结果，<span class="highlight">使用阶段（耗电）碳排放占比最显著</span>，其次为原材料获取（钢材、铝材等）。<br>
+            → 电梯制造企业范围三中“已售产品的使用”类别占绝对主导。
+        </div>
+        <div class="card">
+            <span class="badge">关键对比：电炉钢 vs 转炉钢</span>
+            <table>
+                <tr><th>工艺</th><th>吨钢CO₂排放</th><th>优点</th><th>缺点</th></tr>
+                <tr><td>电炉钢</td><td class="highlight">0.4~0.6 tCO₂</td><td>低碳环保(比转炉低~70%)，废钢利用率高，流程短</td><td>电耗高，成本受电价影响大，钢水纯净度略低</td></tr>
+                <tr><td>转炉钢</td><td>1.8~2.2 tCO₂</td><td>生产效率高，适合大规模，钢水质量稳定</td><td>碳排放极高，焦化/烧结污染重</td></tr>
+            </table>
+            <p>🌍 地区差异：中国电炉钢占比仅~10%，美国达90%，欧洲45%。选用电炉钢可大幅降低原材料碳排放。</p>
+        </div>
+        <div class="card">
+            <strong>🏭 国内部分钢厂电炉转型概况 (数据来源于公开报告)</strong>
+            <table style="font-size:0.8rem;">
+                <tr><th>企业</th><th>电炉/低碳举措</th><th>转炉钢占比(推算)</th></tr>
+                <tr><td>宝武湛江钢铁</td><td>180万吨/年近零碳电炉产线，年减排约314万吨CO₂</td><td>约95%-97%</td></tr>
+                <tr><td>河钢石钢</td><td>全废钢电炉基地，2×130吨电炉</td><td>集团约96%-98%</td></tr>
+                <tr><td>中信泰富特钢</td><td>以电炉为主（特钢工艺），高端特钢领先</td><td>电炉占比70%-80%</td></tr>
+                <tr><td>沙钢股份</td><td>量子电炉升级，光伏60MW</td><td>约90%-95%长流程为主</td></tr>
+            </table>
+        </div>
+        <div class="card">
+            <strong>📌 供应链碳排放占比差异（企业类型对比）</strong><br>
+            - 电梯制造企业：下游“已售产品使用阶段”占比最高（使用20年耗电）。<br>
+            - 陶瓷制造企业：上游“采购货物与服务”为主要排放类别（生产过程碳密集，使用阶段直接排放几乎为0）。<br>
+            ✅ 重难点：识别核心范围三类别因行业而异，减排重点截然不同。
+        </div>
+    </div>
+
+    <!-- 减排策略项目设计 -->
+    <div class="section">
+        <h3>🎯 减排策略设计（电梯企业路线图）</h3>
+        <div class="card">
+            <strong>短中长期目标及举措</strong>
+            <table>
+                <tr><th>时间</th><th>关键目标与行动</th><th>预期减排效果</th></tr>
+                <tr><td>短期 (1年)</td><td>全厂碳盘查+LCA建模，综合能耗↓8%，产品碳强度↓6%</td><td>数据基础建立</td></tr>
+                <tr><td>中期 (2-3年)</td><td>清洁能源占比提升，绿色原材料占比>60%，供应商数据覆盖率100%</td><td>范围三下降10-15%</td></tr>
+                <tr><td>长期 (3-5年)</td><td>产品轻量化、工艺低碳化，单梯碳足迹行业先进水平</td><td>原材料碳排放↓7-12%</td></tr>
+                <tr><td>2050愿景</td><td>全价值链净零排放 (1.5℃目标)</td><td>—</td></tr>
+            </table>
+            <p>🔹 具体路径：能源结构优化（节电模块、LED）、电动叉车替代、高强材料轻量化、绿色供应商替换、数字化碳管理平台（LCA常态化）。</p>
+        </div>
+    </div>
+
+    <!-- 5. 供应链数据共建与未来展望 -->
+    <div class="section">
+        <h3>🤝 05 供应链数据共建 & 转型支撑</h3>
+        <div class="card">
+            <strong>📚 核心支撑数据/排放因子来源</strong><br>
+            • 中国生态环境部电力因子 &nbsp;• 一米一数据库(LCI模型) &nbsp;• PEF数据库(欧盟产品环境足迹)<br>
+            • IPCC指南排放因子 &nbsp;• Ecoinvent 3.12 &nbsp;• GaBi数据库（工业过程）
+        </div>
+        <div class="card">
+            <span class="badge">绿色供应链转型驱动力</span><br>
+            ✅ 政策法规（CBAM碳关税） ✅ 市场/消费者ESG偏好 ✅ 内部降本增效（能效提升）<br>
+            <strong>行动路径</strong>：战略提升（ESG量化KPI）→ 循环商业模式设计 → 供应商协同减排（ESG采购标准、数据监管、能力扶持）。
+        </div>
+        <div class="card">
+            <strong>🔮 未来展望：数字化与智能化管理</strong>
+            <ul>
+                <li>区块链：碳数据透明不可篡改，智能合约自动执行目标</li>
+                <li>AI+大数据：碳排放预测、异常检测、供应链碳优化决策</li>
+                <li>国际标准互认：产品碳足迹体系对接，便利全球绿色贸易</li>
+                <li>提升核心竞争力：实时监测溯源、精准决策支持</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 额外关键表格汇总 -->
+    <div class="section">
+        <h3>📑 补充：范围三15个类别 (GHG Protocol)</h3>
+        <div class="card" style="font-size:0.85rem;">
+            <p>上游：采购货物/服务、资本设备、燃料能源相关、上游运输配送、运营废弃物、商务差旅、员工通勤、上游租赁资产<br>
+            下游：下游运输配送、产品使用阶段、产品生命末期处理、下游租赁资产、特许经营、投资等。<br>
+            <span class="highlight">重难点</span>：产品使用阶段及采购货物通常是排放主体，数据获取需供应商实测/场景假设。</p>
+        </div>
+    </div>
+
+    <div class="framework" style="background:#e4f0de;">
+        <p style="font-weight:500;">🔔 总结要点：<br>
+        ✅ 供应链碳管理核心在于范围三数据治理与供应商协同。<br>
+        ✅ 排放因子法三大层级中“供应商实测法”是提高精度的关键。<br>
+        ✅ LCA帮助识别从摇篮到坟墓的热点（如电梯使用阶段）。<br>
+        ✅ 电力因子更新、电炉钢替代、数字化平台共建是主流减排杠杆。</p>
+    </div>
+
+    <!-- 下载按钮 -->
+    <div style="display: flex; justify-content: flex-end; margin-top: 1rem;">
+        <button class="btn-download" id="downloadMarkdownBtn">📥 下载 Markdown 格式总结</button>
+    </div>
+    <footer>基于《供应链碳管理平台》内容整理 | 忠实原结构 · 重难点已标注 | 数据来源：ISO 14069, GHG Protocol, 企业报告等</footer>
+</div>
+
+<script>
+    const markdownContent = `# 供应链碳管理平台 · 专题知识总结（完整版）
+
+> 基于碳核算标准 + 企业数据治理 + LCA案例 + 供应链共建，聚焦范围三减排。
+
+## 📌 专题框架总览
+01 碳核算方法解析 | 02 企业碳数据管理 | 03 案例与实操（电梯LCA） | 04 供应链碳贡献分析 | 05 供应链数据共建与减排决策
+
+---
+
+## 01 碳核算方法解析
+
+### 标准体系（重难点）
+- **GHG Protocol**：企业核算标准（范围一/二）、产品生命周期标准
+- **ISO 14064/14067/14069**：组织量化、产品碳足迹、技术指南（类别9/18详解）
+
+### 排放范围对比
+| 范围 | 定义 | 示例 |
+|------|------|------|
+| 范围一 | 直接排放 | 燃料燃烧、工艺过程 |
+| 范围二 | 外购电力/热 | 电力消耗 |
+| 范围三 | 价值链间接 | 采购货物、物流、产品使用（15类） |
+
+⚠️ **难点**：范围三排放占企业总排放80%+，数据链条长，依赖二次数据，透明度低。
+
+### 核算方法 & 公式
+**排放量 (tCO₂e) = 活动数据 × 排放因子**
+
+- 支出法：采购金额 × 排放因子（粗略）
+- 行业均值法：物料量 × 行业平均因子（常用）
+- **供应商实测法**：采购量 × 供应商提供碳强度（最佳实践，但数据要求高）
+
+### LCA四阶段框架
+目标与范围定义 → 清单分析 → 影响评估 → 结果解释
+
+---
+
+## 02 企业碳数据管理
+
+- **数据边界**：功能单位、时间、地域、价值链边界
+- **数据类型**：燃料燃烧、电力、摇篮到大门数据、碳绩效
+- **数据质量四性**：可靠性、完整性、一致性、透明性
+- **当前挑战**：核算指南不完善、排放因子滞后、范围三获取困难、CBAM等国际互认压力
+
+---
+
+## 03 案例实操 · 电梯产品碳足迹
+
+### 简化BOM表（部分）
+| 物料 | 消耗量(kg) | 运输距离(km) |
+|------|------------|--------------|
+| 钢材 | 4610 | 300 |
+| 混凝土 | 1580 | 100 |
+| 铝合金 | 52 | 100 |
+| PCB板 | 1.4 | 100 |
+
+**边界**：摇篮到坟墓（使用20年）→ 使用阶段碳贡献最高
+
+---
+
+## 04 供应链碳贡献分析
+
+### 电炉钢 vs 转炉钢（减排关键）
+- 电炉钢：0.4~0.6 tCO₂/吨钢，废钢利用率高
+- 转炉钢：1.8~2.2 tCO₂/吨钢，适合大规模但碳密集
+
+**国内部分钢厂数据**：宝武湛江电炉产线，河钢全废钢基地，电炉钢占比对碳强度影响显著。
+
+### 供应链占比差异
+- 电梯企业：使用阶段（下游范围三）占比最高
+- 陶瓷企业：采购货物与服务（上游）占比最高  
+→ 减排必须识别核心类别
+
+---
+
+## 05 减排策略设计（电梯企业）
+
+| 周期 | 目标举措 | 预期减排 |
+|------|----------|----------|
+| 短期1年 | 碳盘查+LCA，综合能耗-8% | 强度-6% |
+| 中期2-3年 | 绿电占比↑，低碳原料>60% | 范围三降10-15% |
+| 长期3-5年 | 轻量化/供应链数字化 | 原材料碳↓7-12% |
+| 2050 | 全价值链净零 | — |
+
+具体路径：LED改造、电动叉车、绿色供应商替换、数字化碳平台。
+
+---
+
+## 06 供应链数据共建与未来
+
+### 排放因子数据库
+中国生态环境部电力因子、Ecoinvent、Gabi、一米一数据库、PEF等。
+
+### 转型驱动力
+政策(CBAM)、市场偏好、内部降本；行动包括战略KPI、循环设计、供应商协同。
+
+### 未来技术
+区块链+AI+国际标准互认，实现碳数据透明化、智能决策与全球绿色贸易便利化。
+
+---
+
+*总结依据原专题内容，标注重难点（范围三、供应商实测法、电炉钢优势、LCA热点识别等）。*
+`;
+    const downloadBtn = document.getElementById('downloadMarkdownBtn');
+    downloadBtn.addEventListener('click', () => {
+        const blob = new Blob([markdownContent], { type: 'text/markdown;charset=utf-8' });
+        const link = document.createElement('a');
+        const url = URL.createObjectURL(blob);
+        link.href = url;
+        link.download = '供应链碳管理_专题总结.md';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    });
+</script>
+</body>
+</html>
