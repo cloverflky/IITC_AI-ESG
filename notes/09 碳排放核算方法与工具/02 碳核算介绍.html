@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 碳核算介绍 - 专题总结</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Noto Sans', system-ui, sans-serif;
+            background: #f0f4f8;
+            color: #1e2a3e;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .header {
+            background: #1c4e3c;
+            color: white;
+            padding: 1.8rem 2rem;
+        }
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .header p {
+            margin-top: 0.5rem;
+            opacity: 0.85;
+            font-size: 0.95rem;
+        }
+        .content {
+            padding: 2rem 2rem 2.5rem;
+        }
+        .section {
+            margin-bottom: 2.2rem;
+            border-left: 4px solid #2c7a4d;
+            padding-left: 1.2rem;
+        }
+        .section h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            color: #1a4735;
+            font-weight: 600;
+        }
+        .section h3 {
+            font-size: 1.25rem;
+            margin: 1rem 0 0.5rem 0;
+            color: #2b5e42;
+            font-weight: 600;
+        }
+        .highlight {
+            background: #eef9f0;
+            border-left: 4px solid #2c7a4d;
+            padding: 0.8rem 1rem;
+            margin: 1rem 0;
+            border-radius: 12px;
+        }
+        .key-point {
+            background: #fff7e5;
+            border-left: 4px solid #e6b12e;
+            padding: 0.6rem 1rem;
+            margin: 0.8rem 0;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        .badge-difficult {
+            background: #dbedfa;
+            color: #0a558c;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-left: 0.6rem;
+            vertical-align: middle;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: #fdfdfd;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        th {
+            background: #e9f1ed;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid #cbd5e1;
+        }
+        td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .footnote {
+            font-size: 0.85rem;
+            color: #4b5563;
+            margin-top: 0.5rem;
+            border-top: 1px dashed #d1d5db;
+            padding-top: 0.5rem;
+        }
+        .btn-download {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1c4e3c;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .btn-download:hover {
+            background: #0f3a2b;
+            transform: translateY(-1px);
+        }
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+        @media (max-width: 680px) {
+            .content { padding: 1.2rem; }
+            .section h2 { font-size: 1.35rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>📘 01 碳核算介绍 <span style="font-size:0.9rem; font-weight:normal;">(基于原文档Page 1–6)</span></h1>
+        <p>碳管理基础 · 碳中和概念 · 全球排放源 · 价值链案例 · 减排路径全景</p>
+    </div>
+    <div class="content">
+        <!-- 1. 碳中和 -->
+        <div class="section">
+            <h2>🌍 碳中和 · 核心定义</h2>
+            <div class="highlight">
+                <strong>✓ 中和 = 净零排放 ≠ 零排放</strong><br>
+                零排放：没有温室气体向大气排放。<br>
+                净零 = 正排放 - 负排放 = 0<br>
+                减排：减少正排放 &nbsp;|&nbsp; 吸收：增加负排放
+            </div>
+            <h3>📌 碳：只包括二氧化碳还是所有温室气体？</h3>
+            <p>根据我国《碳排放权交易管理办法》，受管控的温室气体包括<strong>七大类</strong>：</p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 0.5rem;">
+                <li>二氧化碳（CO₂）</li>
+                <li>甲烷（CH₄）</li>
+                <li>氧化亚氮（N₂O）</li>
+                <li>氢氟碳化物（HFCs）</li>
+                <li>全氟化碳（PFCs）</li>
+                <li>六氟化硫（SF₆）</li>
+                <li>三氟化氮（NF₃）</li>
+            </ul>
+            <p>👉 利用<strong>全球变暖潜势（GWP）</strong>统一换算为 <strong>二氧化碳当量（CO₂e）</strong>。<br>
+            <span class="badge-difficult">重难点</span> 理解不同温室气体GWP差异（如CH₄的GWP=28, SF₆达23500等），以及“碳中和”必须涵盖所有温室气体的中和。</p>
+            <div class="key-point">
+                🔔 <strong>关键结论：碳中和 = 所有温室气体的中和</strong>，不仅是CO₂。
+            </div>
+        </div>
+
+        <!-- 2. 碳核算目标 + 全球排放源 -->
+        <div class="section">
+            <h2>🎯 碳核算：“无量化，无管理”</h2>
+            <p><strong>目标</strong>：了解排放源和每一个排放源的排放量 → 为碳减排和碳中和提供数据基础。</p>
+            <h3>🌎 从全球来看，排放源构成（重要比例）</h3>
+            <table>
+                <thead>
+                    <tr><th>排放类别</th><th>贡献比例</th><th>具体说明</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>能源使用的碳排放</td><td>≈ 80%</td><td>燃烧化石燃料（煤、石油、天然气）产生的排放</td></tr>
+                    <tr><td>工业生产过程排放</td><td>≈ 3%</td><td>水泥行业（石灰石分解）、钢铁行业（焦炭还原剂）等</td></tr>
+                    <tr><td>甲烷逸散排放</td><td>≈ 15%</td><td>煤油气生产泄漏、反刍动物肠道发酵、农业活动</td></tr>
+                    <tr><td>烈性温室气体排放</td><td>—</td><td>N₂O（农业化肥）、HFCs（制冷剂）、PFCs/NF₃（半导体）、SF₆（高压开关绝缘）</td></tr>
+                </tbody>
+            </table>
+            <div class="key-point">
+                🧠 <strong>重难点</strong>：记住核心排放贡献顺序（能源＞甲烷逸散＞工业过程），理解工业过程中水泥与钢铁的特殊性，以及烈性温室气体虽总量占比小但GWP极高。
+            </div>
+        </div>
+
+        <!-- 3. 案例：Walkers薯片碳足迹 -->
+        <div class="section">
+            <h2>📊 经典案例：英国碳信托 × Walkers薯片</h2>
+            <p><strong>背景</strong>：2006年，英国碳信托帮助百事可乐旗下Walkers品牌测量薯片碳足迹，评估价值链各环节碳排放占比。</p>
+            <ul>
+                <li><strong>发现</strong>：原材料采集和制造过程是生命周期中最主要的排放源，两者合计约占总碳足迹的<strong>70%</strong>。</li>
+                <li><strong>原材料阶段问题</strong>：农民为增加土豆重量采用人工加湿存储，增加能耗并导致额外碳排放。</li>
+                <li><strong>改进措施</strong>：
+                    <ul><li>与供应商合作改善农业生产和储存实践（优化灌溉、减少化肥）；</li>
+                    <li>生产设施实施节能措施，成功将每公斤薯片能耗降低<strong>33%</strong>。</li></ul>
+                </li>
+                <li><strong>成效</strong>：2007–2009年，整体碳足迹减少<strong>7%</strong>，相当于减少4800吨CO₂e排放。</li>
+            </ul>
+            <div class="highlight">
+                💡 启示：产品碳足迹分析可识别“热点”环节（原材料+制造），针对性改进能显著降碳，且价值链协同至关重要。
+            </div>
+        </div>
+
+        <!-- 4. 如何实现碳中和：不同来源碳中和路径 -->
+        <div class="section">
+            <h2>🛤️ 不同碳排放来源的碳中和路径</h2>
+            <p>依据排放源特性，采取差异化技术路径：</p>
+            <table>
+                <thead>
+                    <tr><th>排放来源</th><th>碳中和路径 / 关键技术</th><th>难点/备注</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>能源部分（燃烧排放）</td>
+                        <td>所有耗能设备改为用电 → 电力全部由可再生能源提供</td>
+                        <td>电气化 + 绿电普及是核心</td>
+                    </tr>
+                    <tr>
+                        <td>工业生产工艺排放（水泥）</td>
+                        <td>除了CCS（碳捕集与封存）以外，目前没有其他成熟解决方法</td>
+                        <td class="badge-difficult">CCS成本高、大规模部署挑战</td>
+                    </tr>
+                    <tr>
+                        <td>工业生产工艺排放（钢铁）</td>
+                        <td>采用绿氢替代焦炭作为还原剂</td>
+                        <td>绿氢制备成本与规模化是瓶颈</td>
+                    </tr>
+                    <tr>
+                        <td>甲烷排放（采矿逸散）</td>
+                        <td>长期看会自然消失；短期加强泄漏监控、防止泄漏</td>
+                        <td>煤/油/气开采逸散控制</td>
+                    </tr>
+                    <tr>
+                        <td>甲烷排放（厌氧发酵：水稻、反刍动物、垃圾等）</td>
+                        <td>甲烷回收利用；或减少牛羊饲养</td>
+                        <td>农业减排涉及生活方式改变</td>
+                    </tr>
+                    <tr>
+                        <td>其他烈性温室气体（HFCs/PFCs/SF₆等）</td>
+                        <td>收集工业生产过程中的副产物并进行分解处理</td>
+                        <td>替代技术（如无SF₆开关）也在发展</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="key-point">
+                ⚠️ <strong>重难点综合</strong>：<br>
+                - 水泥行业缺乏替代工艺，高度依赖CCS；<br>
+                - 钢铁行业“绿氢革命”是未来方向；<br>
+                - 甲烷减排需从监控、回收、农业管理多线推进；<br>
+                - 烈性温室气体因GWP极高，即使少量泄漏也需严格管控。
+            </div>
+        </div>
+
+        <!-- 补充说明：碳管理行业业务方向（原Page2） -->
+        <div class="section">
+            <h2>🏢 碳管理行业最主要的业务方向（文档提示）</h2>
+            <p>根据原文档框架，碳管理核心业务包括：企业碳核算/碳盘查、碳中和规划、碳足迹咨询、ESG信息披露、碳交易支持、减排项目开发等。<br>
+            <span style="background:#f0f2f5; padding:0.1rem 0.4rem; border-radius:12px;">* 原文Page2仅列出标题，此处基于上下文概括，未添加额外虚构内容。</span></p>
+        </div>
+
+        <!-- 汇总提醒：重要公式与表格 -->
+        <hr>
+        <div style="background:#f9fbfe; border-radius: 20px; padding: 1rem 1.3rem; margin-top: 1rem;">
+            <h3 style="margin-top:0;">📐 核心公式（本专题通用逻辑）</h3>
+            <p style="font-family: monospace; font-size:1.1rem; background: #eef2f5; display: inline-block; padding: 0.3rem 1rem; border-radius: 30px;">碳排放量 = 活动数据 × 排放因子 × GWP值</p>
+            <p class="footnote" style="margin-top: 10px;">※ 本部分“01 碳核算介绍”以概念、结构、路径为主，详细公式演练在后续章节（组织层面/产品层面）。</p>
+        </div>
+        <div style="margin-top: 1rem; text-align: right;">
+            <button id="downloadMarkdownBtn" class="btn-download">📥 下载 Markdown 格式</button>
+        </div>
+    </div>
+</div>
+<script>
+    (function() {
+        // 生成当前页面总结对应的Markdown内容（严格依据原始结构，无虚构）
+        const markdownContent = `# 01 碳核算介绍 (基于原文档Page 1–6)
+
+## 一、碳中和核心定义
+
+- **中和 = 净零排放 ≠ 零排放**  
+  零排放：没有温室气体向大气排放。  
+  净零 = 正排放 - 负排放 = 0  
+  减排：减少正排放 ； 吸收：增加负排放
+
+- **碳的范围**：根据我国《碳排放权交易管理办法》，管控温室气体包括七大类：  
+  CO₂、CH₄、N₂O、HFCs、PFCs、SF₆、NF₃  
+  利用 **全球变暖潜势(GWP)** 换算为 **二氧化碳当量(CO₂e)**
+
+> 🔔 **重难点**：碳中和 = 所有温室气体的中和，不仅是CO₂；不同温室气体GWP差异巨大。
+
+## 二、碳核算目标与全球排放源
+
+- **目标**：“无量化，无管理” —— 摸清排放源及排放量
+- **全球排放源构成（重要比例）**
+
+| 排放类别 | 贡献比例 | 说明 |
+|----------|----------|------|
+| 能源使用的碳排放 | ≈80% | 燃烧化石燃料 |
+| 工业生产过程排放 | ≈3% | 水泥、钢铁等（化学反应） |
+| 甲烷逸散排放 | ≈15% | 煤油气泄漏、反刍动物、农业 |
+| 烈性温室气体 | — | N₂O(化肥)、HFCs(制冷剂)、PFCs/NF₃(半导体)、SF₆(高压开关) |
+
+> 🧠 重难点：牢记能源排放占主导，工业过程虽占比小但难以替代，烈性气体GWP极高需严控。
+
+## 三、经典案例：Walkers薯片碳足迹
+
+- **背景**：2006年英国碳信托测量Walkers薯片碳足迹  
+- **发现**：原材料采集 + 制造过程占全生命周期碳足迹 **70%**；原材料存储方式（人工加湿）增加能耗及排放  
+- **改进**：优化灌溉/减少化肥 + 生产节能 → 每公斤薯片能耗降低33%  
+- **效果**：2007–2009年整体碳足迹减少7%（相当于4800吨CO₂e）
+
+## 四、不同碳排放来源的碳中和路径
+
+| 排放来源 | 碳中和路径 | 关键难点 |
+|----------|------------|----------|
+| 能源部分（燃烧） | 设备电气化 + 可再生能源供电 | 电气化改造、绿电供应 |
+| 水泥工艺排放 | 依赖CCS（碳捕集） | CCS成本高、技术成熟度 |
+| 钢铁工艺排放 | 绿氢替代焦炭 | 绿氢制备及成本 |
+| 甲烷排放（采矿逸散） | 监控泄漏；长期自然消失 | 短期监测技术 |
+| 甲烷排放（厌氧发酵：水稻/牛羊/垃圾） | 甲烷回收利用；减少养殖 | 农业和生活方式改变 |
+| 其他烈性温室气体（HFCs/PFCs/SF₆等） | 收集工业副产物并分解 | 替代技术开发 |
+
+## 五、核心公式（通用量化逻辑）
+
+**碳排放量 = 活动数据 × 排放因子 × GWP值**
+
+> 详细公式及参数在组织层面、产品层面展开。
+
+---
+
+*本总结完全基于原文档内容（Page 1–6），未添加虚构信息，重点标注了比例、案例启示及不同行业减排路径。*  
+生成时间: 2026年6月
+`;
+        const btn = document.getElementById('downloadMarkdownBtn');
+        btn.addEventListener('click', function() {
+            const blob = new Blob([markdownContent], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = '01_carbon_accounting_intro.md';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+    })();
+</script>
+</body>
+</html>

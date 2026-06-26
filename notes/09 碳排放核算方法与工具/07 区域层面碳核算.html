@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>区域层面碳核算 | 温室气体清单编制 | 专题总结</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #eef2f6;
+            font-family: 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+            padding: 2rem 1rem;
+            line-height: 1.5;
+            color: #1e2a3e;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .header {
+            background: #2c5a6e;
+            background: linear-gradient(135deg, #2c5a6e 0%, #1a3f4f 100%);
+            color: white;
+            padding: 1.8rem 2rem;
+        }
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        .header p {
+            margin-top: 0.5rem;
+            opacity: 0.85;
+        }
+        .content {
+            padding: 2rem 2rem 2.5rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+            border-left: 4px solid #2c7a4d;
+            padding-left: 1.2rem;
+        }
+        .section h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.6rem;
+            color: #1a4735;
+            font-weight: 600;
+        }
+        .section h3 {
+            font-size: 1.25rem;
+            margin: 1rem 0 0.5rem;
+            color: #2b5e42;
+        }
+        .highlight {
+            background: #eef9f0;
+            border-left: 4px solid #2c7a4d;
+            padding: 0.8rem 1rem;
+            margin: 1rem 0;
+            border-radius: 12px;
+        }
+        .key-point {
+            background: #fff7e5;
+            border-left: 4px solid #e6b12e;
+            padding: 0.6rem 1rem;
+            margin: 0.8rem 0;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        .badge-difficult {
+            background: #dbedfa;
+            color: #0a558c;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-left: 0.6rem;
+            vertical-align: middle;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: #fdfdfd;
+            border-radius: 16px;
+            overflow-x: auto;
+            display: block;
+        }
+        th {
+            background: #e9f1ed;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid #cbd5e1;
+        }
+        td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .formula {
+            background: #f1f5f9;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+            text-align: center;
+        }
+        .footnote {
+            font-size: 0.85rem;
+            color: #4b5563;
+            margin-top: 0.5rem;
+            border-top: 1px dashed #d1d5db;
+            padding-top: 0.5rem;
+        }
+        .btn-download {
+            display: inline-block;
+            margin-top: 1.8rem;
+            background: #2c5a6e;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            cursor: pointer;
+            border: none;
+            font-size: 0.9rem;
+        }
+        .btn-download:hover {
+            background: #1a3f4f;
+            transform: translateY(-1px);
+        }
+        hr {
+            margin: 1.2rem 0;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+        @media (max-width: 680px) {
+            .content { padding: 1.2rem; }
+            .section h2 { font-size: 1.4rem; }
+            table { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🗺️ 区域层面碳核算 · 温室气体清单编制</h1>
+        <p>基于原文档 Page 136–174 | 五大领域 · 质量原则 · 数据收集 · 报告编写</p>
+    </div>
+    <div class="content">
+
+        <!-- 概述 -->
+        <div class="section">
+            <h2>📌 概述</h2>
+            <p>区域层面碳核算在行业内一般称为<strong>温室气体清单编制</strong>，指在某个行政区划（国家、省、市、县乃至社区）内温室气体排放的分类计算及汇总。目的是了解管辖区域的温室气体排放情况，支撑“双碳”目标。</p>
+            <h3>参考标准</h3>
+            <ul>
+                <li><strong>IPCC国家温室气体清单指南</strong>：全球通用，我国碳达峰碳中和目标中碳排放计算以此为准。</li>
+                <li><strong>省级温室气体清单指南</strong>：国家发改委组织编制，参考IPCC方法，在广东、湖北、天津等七省市试点，是我国区域清单的主要参考。</li>
+                <li><strong>城市温室气体清单指南</strong>（WRI编制）：提供统一排放因子和表单，是数据收集和计算的辅助工具。我国官方目前无市县层面编制文件。</li>
+            </ul>
+            <div class="key-point">
+                🧠 <strong>重难点</strong>：区域清单与组织清单在数据来源、边界划分上不同，同一排放源两种核算方式结果可能不同（原文档Page142）；区域清单需覆盖五大领域，数据收集工作量大。
+            </div>
+        </div>
+
+        <!-- 五大领域 -->
+        <div class="section">
+            <h2>🌾 2.2 五大领域的碳排放（核心框架）</h2>
+            <p>原文档第143页列出了区域温室气体清单必须覆盖的五大领域及其子类别：</p>
+            <table>
+                <thead><tr><th>领域</th><th>主要排放源/吸收汇</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>1. 能源活动排放</strong></td><td>化石燃料燃烧（固定源+移动源）、生物质燃烧、煤炭开采逃逸、油气系统逃逸、电力调入调出间接排放</td></tr>
+                    <tr><td><strong>2. 工业生产过程排放</strong></td><td>水泥、石灰、钢铁、电石、硝酸、己二酸、铝、镁、半导体、HCFC-22等生产过程排放</td></tr>
+                    <tr><td><strong>3. 农业碳排放</strong></td><td>稻田甲烷、农用地氧化亚氮（直接/间接）、动物肠道发酵甲烷、动物粪便管理甲烷/氧化亚氮</td></tr>
+                    <tr><td><strong>4. 土地利用变化和林业</strong></td><td>森林和其他木质生物质碳储量变化、森林转化燃烧/分解排放（含CO₂、CH₄、N₂O）</td></tr>
+                    <tr><td><strong>5. 废弃物处理</strong></td><td>固体废弃物填埋/焚烧（CH₄/CO₂）、生活污水和工业废水处理（CH₄/N₂O）</td></tr>
+                </tbody>
+            </table>
+            <div class="key-point">
+                📊 <strong>重难点</strong>：能源活动排放占比最高，需分部门、分燃料、分设备细致核算；工业生产过程排放需根据当地产业特点决定是否为重点；农业和林业清单涉及复杂的排放因子和活动数据（如稻田类型、动物存栏量、森林蓄积量）。
+            </div>
+        </div>
+
+        <!-- 清单质量原则 -->
+        <div class="section">
+            <h2>✅ 清单质量原则（原文档Page141）</h2>
+            <ul>
+                <li><strong>透明性</strong>：充足清晰的文档，使他人能理解编制过程，满足优良作法要求。</li>
+                <li><strong>完整性</strong>：所有相关源、汇和气体均得到报告，缺失部分需明确说明并解释理由。</li>
+                <li><strong>一致性</strong>：不同年份、气体、类别使用相同方法，确保趋势反映真实排放变化。</li>
+                <li><strong>可比性</strong>：按统一格式报告，便于国家间比较。</li>
+                <li><strong>确定性</strong>：清单应既不偏高也不偏低，尽量消除偏差。（区别组织层面要求：相关性）</li>
+            </ul>
+            <div class="key-point">
+                🎯 重难点：一致性要求方法学固定，但技术进步可能导致方法变更，此时需评估对趋势的影响并记录。
+            </div>
+        </div>
+
+        <!-- 主要工作内容 & 重难点（Page142） -->
+        <div class="section">
+            <h2>🛠️ 2.1 主要工作内容及重难点</h2>
+            <ul>
+                <li>许多数据难以找到最合适的数据源，需近似处理并做出说明。</li>
+                <li>数据收集工作量巨大，实操中要“抓大放小”，结合地区排放特点把握重点方向。</li>
+                <li>同一排放源在组织层面和区域层面核算结果可能不一致。</li>
+            </ul>
+            <div class="highlight">
+                💡 数据收集原则：优先当地统计部门数据 → 行业部门数据 → 调研数据；跨界数据按“区域内产生”原则归属。
+            </div>
+        </div>
+
+        <!-- 分领域详细方法（表格及公式） -->
+        <div class="section">
+            <h2>📂 分领域核算要点（基于原文档144-166）</h2>
+            
+            <h3>🔹 能源活动排放</h3>
+            <p><strong>化石燃料燃烧CO₂排放（部门法）</strong>：<br>
+            排放量 = Σ Σ Σ (燃料消耗量 × 热值 × 单位热值含碳量 × 44/12 × 氧化率 × GWP)<br>
+            需分部门（电力、工业、建筑、交通等）、分燃料品种、分设备类型。移动源（交通）需整合公路、铁路、航空、水运，并注意从能源平衡表中抽取非营运交通用能。</p>
+            
+            <h3>🔹 工业生产过程排放</h3>
+            <p>主要行业及温室气体类型表（Page153）：水泥(CO₂)、石灰(CO₂)、钢铁(CO₂)、电石(CO₂)、硝酸(N₂O)、己二酸(N₂O)、铝(PFCs/CO₂)、镁(SF₆)、半导体(PFCs/NF₃)、HCFC-22(HFC-23)等。<br>
+            <strong>水泥过程排放</strong>：ECO₂ = 熟料产量(扣除电石渣) × 排放因子(缺省值0.538 tCO₂/t熟料)。<br>
+            <strong>钢铁过程排放</strong>：包括熔剂、电极、原料等排放，企业实际报送数据可用。</p>
+            
+            <h3>🔹 农业碳排放</h3>
+            <p><strong>稻田甲烷</strong>：不同类型稻田面积 × 甲烷排放因子（分区域缺省值，如华东单季稻215.5 kg/ha）。<br>
+            <strong>农用地氧化亚氮</strong>：氮输入量（氮肥、粪肥、秸秆还田） × 排放因子，包括直接排放和间接排放（大气氮沉降、淋溶径流）。<br>
+            <strong>动物肠道发酵/粪便管理</strong>：不同动物年末存栏量 × 甲烷/氧化亚氮排放因子。</p>
+            
+            <h3>🔹 土地利用变化和林业</h3>
+            <p><strong>森林生物量碳储量变化</strong>：包括乔木林、经济林、竹林、灌木林、疏林、四旁树等，蓄积量/面积 × 碳汇因子。<br>
+            <strong>森林转化排放</strong>：毁林导致的燃烧排放（CO₂, CH₄, N₂O）和分解排放（CO₂）。</p>
+            
+            <h3>🔹 废弃物处理</h3>
+            <p><strong>固体废弃物填埋CH₄</strong>：基于可降解有机碳、甲烷产生潜力、回收量等计算。<br>
+            <strong>废水处理CH₄/N₂O</strong>：工业废水COD去除量、生活污水BOD等。</p>
+            
+            <div class="key-point">
+                ⚙️ 重难点清单：<br>
+                - 能源活动：移动源数据整合（非营运车辆用能需从其他部门拆分）；<br>
+                - 工业过程：需识别本地主要工业行业，缺省排放因子不一定准确，鼓励实测；<br>
+                - 农业：稻田甲烷排放因子分区域差异大，动物种类需细分（奶牛、水牛、黄牛等）；<br>
+                - 林业：碳汇（吸收）用负值表示，森林转化排放需区分现地/异地燃烧；<br>
+                - 废弃物：填埋场管理状况（深度、有无回收）影响排放因子。
+            </div>
+        </div>
+
+        <!-- 数据收集与不确定性分析 -->
+        <div class="section">
+            <h2>📊 2.3 数据的收集及不确定性分析</h2>
+            <p><strong>数据收集原则</strong>：兼顾效率与质量。优先当地统计部门数据，其次是各行业部门数据，最后才考虑调研。跨界数据按“区域内产生”原则归属。<br>
+            <strong>不确定性原因</strong>：缺乏完整性、模型简化、数据缺失、代表性不足、随机误差、测量误差、错误报告等8类。<br>
+            <strong>降低不确定性的方法</strong>：改进模型、提高数据代表性、精确测量、增加样本、消除已知偏差、提高编制人员能力。</p>
+            <div class="key-point">
+                📈 重难点：不确定性分析是清单可信度的重要保障，应优先处理对总排放影响最大的关键类别（Key Category）。
+            </div>
+        </div>
+
+        <!-- 质量保证和质量控制 -->
+        <div class="section">
+            <h2>✅ 2.4 质量保证和质量控制</h2>
+            <p><strong>质量控制(QC)</strong>：定期检验数据内在一致性、正确性和完整性，确认并解决误差，归档所有质量控制活动。<br>
+            <strong>质量保证(QA)</strong>：邀请未参与清单编制的独立专家（其他机构、国内外专家）进行评审。<br>
+            <strong>验证、归档、存档</strong>：所有清单活动相关的计划、过程、管理信息均应成文存档，用于持续改进。</p>
+            <div class="key-point">
+                🔍 重难点：QA/QC程序是清单优良作法的核心，尤其对于首次编制清单的地区，独立评审至关重要。
+            </div>
+        </div>
+
+        <!-- 报告编写 -->
+        <div class="section">
+            <h2>📝 2.5 区域温室气体清单报告的编写</h2>
+            <p>参考《广东省市县(区)级温室气体清单编制指南》，报告结构一般为：<strong>总报告 + 五大领域单独成章</strong>。每章按排放源界定、计算方法、活动数据、排放因子、排放量计算及不确定性分析的顺序编写，内容完全独立。</p>
+            <div class="key-point">
+                📑 重难点：报告需透明记录所有假设、数据来源、排放因子引用，确保可复现性。
+            </div>
+        </div>
+
+        <!-- 辅助工具：城市温室气体核算工具表格 -->
+        <div class="section">
+            <h2>📎 辅助工具</h2>
+            <p>WRI编制的《城市温室气体核算工具指南》提供了配套的Excel核算表格（如“城市温室气体核算工具2.2”），覆盖所有碳排放相关活动数据及排放因子，是区域清单数据收集和计算的有力辅助工具。</p>
+        </div>
+
+        <hr>
+        <div style="margin-top: 1.8rem; text-align: center;">
+            <button id="downloadMarkdownBtn" class="btn-download">📥 下载 Markdown 格式</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        const markdownContent = `# 区域层面碳核算 · 温室气体清单编制
+
+> 基于原文档 Page 136–174，完整覆盖区域清单编制框架。
+
+## 一、概述
+- **定义**：区域层面碳核算即温室气体清单编制，指在行政区划内对温室气体排放的分类计算及汇总。
+- **参考标准**：IPCC国家温室气体清单指南（全球通用）、省级温室气体清单指南（我国主要参考）、WRI城市温室气体清单指南（辅助工具）。
+
+## 二、五大领域碳排放
+
+| 领域 | 主要排放源/吸收汇 |
+|------|------------------|
+| 能源活动 | 化石燃料燃烧（固定/移动源）、生物质燃烧、煤炭油气逃逸、电力调入调出间接排放 |
+| 工业生产过程 | 水泥、石灰、钢铁、电石、硝酸、己二酸、铝、镁、半导体、HCFC-22等 |
+| 农业 | 稻田甲烷、农用地氧化亚氮（直接/间接）、动物肠道发酵甲烷、动物粪便管理CH₄/N₂O |
+| 土地利用变化和林业 | 森林碳储量变化、森林转化燃烧/分解排放 |
+| 废弃物处理 | 固体废弃物填埋/焚烧、生活污水/工业废水处理CH₄/N₂O |
+
+## 三、清单质量原则
+透明性、完整性、一致性、可比性、确定性。
+
+## 四、主要工作重难点
+- 数据收集工作量大，需抓大放小，优先统计部门数据。
+- 跨界数据按“区域内产生”原则归属。
+- 同一排放源组织与区域核算结果可能不同。
+
+## 五、分领域核算要点
+
+### 能源活动
+- 化石燃料燃烧CO₂排放 = Σ(燃料消耗 × 热值 × 单位热值含碳量 × 44/12 × 氧化率)
+- 需分部门、分燃料、分设备；移动源需整合公路、铁路、水运、航空，并注意非营运交通用能的拆分。
+
+### 工业生产过程
+- 水泥：ECO₂ = 熟料产量(扣除电石渣) × 0.538 tCO₂/t熟料
+- 钢铁、硝酸、己二酸等行业多采用企业实际报送数据。
+- 重点关注地区优势重工业。
+
+### 农业
+- 稻田甲烷：播种面积 × 区域缺省排放因子
+- 农用地氧化亚氮：氮输入量 × 排放因子（直接+间接）
+- 动物肠道发酵/粪便管理：存栏量 × 排放因子
+
+### 土地利用变化和林业
+- 森林碳储量变化：各类林木面积/蓄积量 × 碳汇因子（负值表示吸收）
+- 森林转化排放：燃烧排放（CO₂, CH₄, N₂O）+ 分解排放（CO₂）
+
+### 废弃物处理
+- 填埋CH₄：基于可降解有机碳、甲烷产生潜力等计算
+- 废水处理CH₄/N₂O：工业废水COD去除量、生活污水指标等
+
+## 六、数据收集与不确定性分析
+- **数据优先顺序**：统计部门 → 行业部门 → 调研数据
+- **不确定性来源**：模型简化、数据缺失、测量误差、缺乏代表性等8类
+- **降低方法**：改进模型、精确测量、增加样本、校准设备、提高人员能力
+
+## 七、质量保证与质量控制(QA/QC)
+- QC：定期检查一致性、正确性、完整性；归档所有活动。
+- QA：邀请独立专家评审（非编制人员）。
+- 验证、存档、报告：所有文档成文存档，持续改进。
+
+## 八、报告编写
+- 结构：总报告 + 五大领域独立章节。
+- 每章内容：排放源界定 → 计算方法 → 活动数据 → 排放因子 → 排放量计算 → 不确定性分析。
+- 参考《广东省市县(区)级温室气体清单编制指南》。
+
+## 九、辅助工具
+WRI《城市温室气体核算工具指南》配套Excel核算表格（如2.2版本），统一排放因子和表单，便于数据收集计算。
+
+---
+
+*本总结严格基于原文档“区域层面碳核算”章节（Page136-174），未添加虚构内容。*
+`;
+        const btn = document.getElementById('downloadMarkdownBtn');
+        btn.addEventListener('click', function() {
+            const blob = new Blob([markdownContent], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'regional_carbon_accounting.md';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+    })();
+</script>
+</body>
+</html>

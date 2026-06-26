@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>企业出海ESG治理实务 · 专题总结（补充文化遗产尽责沟通）</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f5f7fa;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      padding: 2rem 1.5rem;
+      color: #1e293b;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 32px;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15);
+      padding: 2.5rem 2.2rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      border-left: 6px solid #0b4f6c;
+      padding-left: 1.2rem;
+      margin-bottom: 0.75rem;
+      color: #0b2a3b;
+    }
+    .subhead {
+      color: #475569;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      padding-left: 1.8rem;
+      border-bottom: 1px solid #e9edf2;
+      padding-bottom: 1rem;
+    }
+    .framework {
+      background: #f0f4fe;
+      padding: 1.6rem 2rem;
+      border-radius: 20px;
+      margin-bottom: 2.8rem;
+    }
+    .framework h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #0b4f6c;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.75rem;
+    }
+    .framework-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2.5rem;
+      font-weight: 500;
+    }
+    .framework-grid span {
+      background: white;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      border: 1px solid #d9e2ef;
+      color: #1e3a5f;
+    }
+    .module {
+      margin-top: 2.2rem;
+    }
+    .module h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #0b2a3b;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .module h3 small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #4b6a8b;
+      background: #eef2f6;
+      padding: 0.1rem 0.9rem;
+      border-radius: 40px;
+    }
+    .card {
+      background: #fafcff;
+      border-radius: 20px;
+      padding: 1.2rem 1.8rem 1.8rem 1.8rem;
+      margin: 1.2rem 0 1.8rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eef2f8;
+    }
+    .card h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #1e3a5f;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge {
+      background: #d0e0f0;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      color: #154a6b;
+    }
+    .badge.highlight {
+      background: #fce9e6;
+      color: #b13e33;
+    }
+    .badge.heritage {
+      background: #d4e2d4;
+      color: #1f5a3a;
+    }
+    ul, .list {
+      padding-left: 1.2rem;
+      line-height: 1.7;
+    }
+    li {
+      margin-bottom: 0.3rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 1rem 0 0.5rem 0;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+    th {
+      background: #e9f0f9;
+      text-align: left;
+      padding: 0.6rem 0.8rem;
+      font-weight: 600;
+      color: #1f4465;
+    }
+    td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid #e6edf5;
+      vertical-align: top;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .tag {
+      background: #dce6f0;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #1f4b70;
+    }
+    .note {
+      background: #f9fbfd;
+      border-left: 4px solid #7f9fc7;
+      padding: 0.8rem 1.2rem;
+      margin: 0.8rem 0;
+      border-radius: 12px;
+      color: #1e3a5f;
+    }
+    .download {
+      margin-top: 2.5rem;
+      text-align: right;
+      border-top: 1px solid #dde3ec;
+      padding-top: 1.8rem;
+    }
+    .download a {
+      background: #1f4b70;
+      color: white;
+      padding: 0.6rem 1.8rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.15s;
+      display: inline-block;
+    }
+    .download a:hover {
+      background: #0f3755;
+    }
+    .footnote {
+      color: #4b5f79;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+    hr {
+      margin: 1.4rem 0;
+      border: 0;
+      border-top: 1px solid #e2e9f2;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    @media (max-width: 640px) {
+      .container { padding: 1.2rem; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    .role-block {
+      background: #eef4fa;
+      border-radius: 16px;
+      padding: 0.8rem 1.4rem;
+      margin: 0.6rem 0 0.8rem 0;
+      border-left: 5px solid #1f6e8c;
+    }
+    .role-block strong {
+      color: #124263;
+    }
+    .heritage-block {
+      background: #ecf5ed;
+      border-radius: 16px;
+      padding: 0.8rem 1.4rem;
+      margin: 0.6rem 0 0.8rem 0;
+      border-left: 5px solid #2a7a4a;
+    }
+  </style>
+</head>
+<body>
+<div class="container" id="main-content">
+  <h1>🌍 企业出海ESG治理实务</h1>
+  <div class="subhead">主讲：葛莹 · 基于品职教育专题资料 · 完整框架总结（补充文化遗产尽责沟通）</div>
+
+  <!-- 框架总览 -->
+  <div class="framework">
+    <h2>📌 专题框架 · 三大核心模块</h2>
+    <div class="framework-grid">
+      <span>01 董事会ESG治理</span>
+      <span>02 反漂绿合规</span>
+      <span>03 ESG投资者关系</span>
+    </div>
+    <div style="margin-top: 0.8rem; font-size: 0.95rem; color: #2f4b6e;">
+      <span class="tag">法定责任</span> <span class="tag">决策边界</span> 
+      <span class="tag">监管处罚</span> <span class="tag">实操红线</span>
+      <span class="tag">海外资金方</span> <span class="tag">尽责管理</span>
+    </div>
+  </div>
+
+  <!-- ========== 模块一 ========== -->
+  <div class="module">
+    <h3>01 董事会ESG治理 <small>董事会的法定责任与决策边界</small></h3>
+    
+    <!-- 补充：董事会监督ESG及可持续发展相关事项的角色 -->
+    <div class="card" style="border-left: 6px solid #1f6e8c;">
+      <h4>⏺ 董事会监督ESG及可持续发展相关事项的角色 <span class="badge" style="background:#1f6e8c; color:white;">补充 · 核心</span></h4>
+      <div class="role-block">
+        <p><strong>战略与文化引领</strong><br>
+        • 设置符合组织可持续发展愿景、战略、目标和计划的文化氛围<br>
+        • 将重要的可持续发展问题纳入战略、商业计划和预算、风险管理以及利益相关方管理中<br>
+        • 确保董事会议程涵盖关键的可持续发展问题</p>
+      </div>
+      <div class="role-block">
+        <p><strong>监督与问责管理</strong><br>
+        • 监督可持续发展目标和计划的设定，并监控这些计划的实施<br>
+        • 监督可持续发展报告和披露的内部控制与鉴证过程<br>
+        • 使管理层对可持续发展政策、战略和目标的实施负责</p>
+      </div>
+      <div class="role-block">
+        <p><strong>风险与机遇治理</strong><br>
+        • 加强对可持续发展风险和机会影响的理解<br>
+        • 将可持续风险与机遇整合到战略与风险管理中（如气候情景分析、转型计划、物理风险与转型风险）</p>
+      </div>
+      <div class="role-block">
+        <p><strong>能力与体系建设</strong><br>
+        • 确保董事会具备必要的可持续发展技能和能力</p>
+      </div>
+      <div style="background:#e4eefa; padding:0.5rem 1rem; border-radius:12px; margin-top:0.5rem; font-size:0.9rem;">
+        <span class="tag">📘 依据</span> 澳洲会计准则委员会(AASB)《可持续发展报告标准》、ASIC监管指引RG 000 — 要求披露气候风险对战略、商业模式、价值链、资产、现金流的影响，以及转型计划、适应/减缓行动、气候目标与资源。
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>1. 董事会职责 <span class="badge">战略·监督·风险</span></h4>
+      <ul>
+        <li><strong>战略与文化引领</strong>：提供战略方向；批准组织的预算和商业计划，并监控计划执行；监督利益相关方的互动和沟通</li>
+        <li><strong>监督与问责管理</strong>：监督战略方向和实施；监督运营和财务表现；就可持续发展绩效和目标对管理层问责；确保组织的财务结果得到适当和准确的报告；确保可持续发展报告的准确性和完整性</li>
+        <li><strong>风险与机遇治理</strong>：确保风险被识别、监控和管理；审查内部合规性和控制系统 ；确保组织的道德行为。</li>
+        <li><strong>能力与体系建设</strong>：任命首席执行官并评估其绩效；监督董事会继任计划。</li>
+      </ul>
+      <div class="note"><strong>📊 核心依据</strong>：澳洲会计准则委员会(AASB)《可持续发展报告标准》、ASIC监管指引RG 000。强调将可持续风险纳入战略与风险管理，并设定指标与目标（如范围1,2,3排放、碳定价等）。</div>
+    </div>
+
+    <div class="card">
+      <h4>2. 董事的职责 <span class="badge highlight">重难点</span></h4>
+      <ul>
+        <li><strong>法定职责</strong>：谨慎勤勉（《公司法》第180条）、诚信行事、避免利益冲突、防止资不抵债交易、财务记录合规。</li>
+        <li><strong>ESG特别义务</strong>：从长期视角审视组织利益，考虑更广泛利益相关者（员工、客户、供应商、原住民等）。</li>
+        <li><strong>违反后果</strong>：刑事/民事制裁、禁止担任董事、商业声誉损失。</li>
+      </ul>
+      <div style="background:#f3f7fd; padding:0.8rem; border-radius:14px; margin-top:0.6rem;">
+        <span class="tag">⚠️ 重点</span> 董事需采取“积极主动和稳健的方式”管理风险与机会，保持短期、中期、长期价值。
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>3. 董事会ESG治理案例 <span class="badge">气候·薪酬·文化·原住民</span></h4>
+      <ul>
+        <li><strong>McVeigh v REST Super</strong>：澳大利亚首例个人因气候风险管理起诉养老基金，和解后重塑受托人审慎义务标准。</li>
+        <li><strong>薪酬合规连锁案</strong>（Domino's、7-Eleven、Woolworths、Wesfarmers）：欠薪丑闻推动治理改革，强调薪酬合规是战略性议题。</li>
+        <li><strong>现代奴隶制与强迫劳动</strong>（Sushi Bay、Blue Sky Kids Land、Easy Vaping）：法院重罚，董事个人承担巨额罚款，明确系统性剥削移民工人的法律后果。</li>
+        <li><strong>力拓朱卡恩峡谷爆破</strong>：合法但违背原住民文化价值，导致CEO及高管辞职、ESG评级暴跌、薪酬报告遭股东否决（双重否决规则）。</li>
+        <li><strong>AMP资本性骚扰处理不当</strong>：提拔涉事高管引发投资者“用脚投票”、核心人才流失，董事会主席辞职，职场文化=财务风险。</li>
+        <li><strong>CBA“文化崩塌”</strong>：反洗钱违规、APRA调查指出“自满文化”“报喜不报忧”，董事会大换血，罚款7亿+10亿资本附加。</li>
+      </ul>
+      <div class="note"><strong>🔍 关键机制</strong>：双重否决规则（Two-Strikes Rule）——连续两年薪酬报告反对票超25%可触发董事会改选。</div>
+    </div>
+  </div>
+
+  <!-- ========== 模块二 ========== -->
+  <div class="module">
+    <h3>02 反漂绿合规 <small>对虚假ESG宣传的处罚与实操红线</small></h3>
+
+    <div class="card">
+      <h4>1. ESG时代的信息风险 & 漂绿动机</h4>
+      <ul>
+        <li><strong>漂绿本质</strong>：表述优于实际情况，通过选择性披露、模糊术语（“绿色”“环保”）、无依据的未来目标获取品牌/融资优势。</li>
+        <li><strong>企业漂绿动因</strong>：ESG表现影响融资与股价；技术路径/成本不确定性导致“过度乐观表达”。</li>
+        <li><strong>绿色沉默(Greenhushing)</strong>：为规避漂绿质疑而减少披露，但可能引发透明度不足与合规风险。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>2. 监管框架与处罚 <span class="badge highlight">重难点</span></h4>
+      <ul>
+        <li><strong>澳大利亚《公司法》</strong>：禁止误导性行为；对未来事项缺乏合理依据的陈述可能被认定为误导。</li>
+        <li><strong>《消费者法》</strong>：禁止商业活动中的误导/欺骗行为，对“绿色”“可持续”标签要求可验证。</li>
+        <li><strong>典型执法案例</strong>：
+          <ul>
+            <li><strong>Santos案（2026）</strong>：ACCR起诉“清洁能源”“净零目标”误导，法院驳回，认定理性投资者能理解不确定性。</li>
+            <li><strong>Active Super（2024）</strong>：宣传ESG负面筛选但实际持有争议资产，被ASIC罚款约1050万澳元。</li>
+            <li><strong>Abrahams v CBA</strong>：股东获准查阅内部文件，核实银行气候政策执行，体现股东监督权。</li>
+            <li><strong>ACCC互联网审查（2022）</strong>：打击网站/营销中的虚假环保声明及虚假评论。</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>3. 企业降低漂绿风险的实操要点 <span class="badge">红线指南</span></h4>
+      <table>
+        <tr><th style="width:30%">行动维度</th><th>具体措施</th></tr>
+        <tr><td>事实依据</td><td>所有声明基于真实情况，前瞻性目标有合理基础。</td></tr>
+        <tr><td>信息披露完整</td><td>既讲正面，也说明限制与重要假设，避免选择性披露。</td></tr>
+        <tr><td>避免模糊措辞</td><td>谨慎使用“清洁”“绿色”“零排放”，明确适用范围。</td></tr>
+        <tr><td>内部审核</td><td>ESG/宣传内容需经内部审查，管理层确认。</td></tr>
+        <tr><td>外部核查</td><td>引入第三方验证或审计，增强可信度。</td></tr>
+      </table>
+      <div style="margin-top:0.8rem; background:#eef6f0; padding:0.6rem 1.2rem; border-radius:12px;">
+        <span class="tag">董事监督要点</span> 审查所有公开ESG声明；质疑净零路径的假设与依赖（碳抵消/新兴技术）；推动外部鉴证。
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 模块三 ========== -->
+  <div class="module">
+    <h3>03 ESG投资者关系 <small>海外资金方的关注点</small></h3>
+
+    <div class="card">
+      <h4>1. 投资尽责管理 (Stewardship) <span class="badge">核心支柱</span></h4>
+      <ul>
+        <li><strong>定义</strong>：机构投资者运用所有权权利，推动被投公司在ESG及长期价值方面提升表现。</li>
+        <li><strong>两大支柱</strong>：互动沟通 (Engagement) 与投票 (Voting)。</li>
+        <li><strong>重要性</strong>：PRI《21世纪信托责任》指出，未考虑ESG可能违反受托责任，面临法律挑战与资金流出。</li>
+        <li><strong>全球尽责守则</strong>：英国(2010)、澳大利亚(2018)、日本、新加坡、南非、香港、韩国等。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>2. 互动沟通 (Engagement) 案例 <span class="badge highlight">重难点</span></h4>
+      <ul>
+        <li><strong>AGL分拆事件</strong>：主要股东Mike Cannon-Brookes联合ACSI强烈反对分拆，最终AGL放弃分拆，董事长及CEO辞职。</li>
+        <li><strong>文化遗产保护（力拓后续）</strong>：ACSI将原住民权利纳入年度尽责沟通，与11家高风险公司董事会举行20+次会议，推动废除“封口条款”、关系重塑。</li>
+        <li><strong>供应链反现代奴隶制</strong>：ACSI联合50家投资者（管理12万亿澳元）推动企业审计、补救、预防；Woolworths树立透明披露标杆，推动立法任命反奴隶制专员。</li>
+      </ul>
+      <!-- 新增：文化遗产保护纳入尽责沟通 详细知识点 -->
+      <div class="heritage-block" style="margin-top:0.8rem;">
+        <h5 style="display:flex; align-items:center; gap:8px; margin-bottom:6px; color:#1f5a3a;">🌿 文化遗产保护纳入尽责沟通 <span class="badge heritage">新增 · 专项</span></h5>
+        <p><strong>背景</strong>：力拓朱卡恩峡谷爆破事件后，机构投资者认识到原住民权利与文化遗产管理不善是重大的系统性财务风险。</p>
+        <ul style="margin-top:4px;">
+          <li><strong>第一步：建立标准与摸底定基准</strong> — ACSI与“权利与文化遗产风险管理工作组”共同制定“原住民关系风险框架”，精准锁定11家高风险或具有行业代表性的重点公司，收集企业回应原住民诉求的深度信息，建立可供未来持续追踪和横向比较的基准。</li>
+          <li><strong>第二步：直击最高治理层</strong> — ACSI将沟通直接指向董事会和最高管理层，在2022年内与这11家公司的董事会成员和/或最高管理层举行了超过20次正式会议，直接向掌握战略决策权的人施压，要求提升透明度。</li>
+          <li><strong>第三步：识别系统漏洞及整改</strong> — ACSI重点追踪三项整改指标：① 废除“封口条款”（审查并重写与原住民的历史协议，消除保密/封口条款）；② 关系重塑（推动企业从“交易型”向“尊重互信型”的原住民关系转变）；③ 资源与授权底线（确保文化遗产团队获得充足授权与财务资源）。</li>
+        </ul>
+        <div style="background:#e1f0e1; padding:0.3rem 0.8rem; border-radius:30px; display:inline-block; font-size:0.8rem; margin-top:4px;">
+          ⚡ 力拓事件后，投资者与高风险公司在原住民问题上的互动显著增加，文化遗产风险已成为机构投资者尽责沟通的核心议题。
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>3. 投票 (Voting) 与政策实践</h4>
+      <ul>
+        <li><strong>ACSI性别多样性投票政策</strong>：对ASX300中女性代表不足30%的董事会，建议对主席/提名委员会投反对票。成效：ASX200女性董事从不足20%升至40%+。</li>
+        <li><strong>Aware Super 负责任所有权政策</strong>：五大支柱——ESG整合、沟通与投票、负面剔除、行业倡导、影响力投资（可再生能源、经济适用房等）。</li>
+      </ul>
+      <table>
+        <tr><th>政策工具</th><th>要点</th></tr>
+        <tr><td>双重否决规则</td><td>薪酬报告连续两年反对票>25%可触发董事会改选（力拓案例）。</td></tr>
+        <tr><td>投票优先级</td><td>主席 → 提名委员会主席 → 提名委员会成员 → 其他连任董事。</td></tr>
+      </table>
+      <div class="note"><strong>📈 数据亮点</strong>：ASX300女性董事长约14%，CEO约6%（2025），十年间性别平衡成为常态。</div>
+    </div>
+  </div>
+
+  <!-- 关键表格汇总 -->
+  <hr>
+  <div style="margin: 1.2rem 0;">
+    <h4 style="display: flex; gap: 12px; align-items: center;">📋 重要机制与公式（概念性）</h4>
+    <div style="background:#f8fafd; padding:0.8rem 1.2rem; border-radius:18px; border:1px solid #dee7f2;">
+      <ul style="list-style: none; padding-left: 0;">
+        <li><strong>双重否决规则</strong>：① 薪酬报告反对票 >25% → “第一击”；② 次年连续反对票 >25% → 触发改选提案，通过后90天内召开特别会议，董事会（除常务董事）重新选举。</li>
+        <li><strong>ACSI投票优先级</strong>：主席 → 提名委员会主席 → 提名委员会成员 → 其他寻求连任董事。</li>
+        <li><strong>净零路径关键要素</strong>：情景分析、假设与依赖性、减缓行动（可再生能源、新技术、碳抵消）、资本配置、范围1/2/3排放目标。</li>
+        <li><strong>文化遗产尽责沟通三步法</strong>：建立标准与摸底 → 直击最高治理层 → 识别系统漏洞及整改（废除封口条款、关系重塑、资源与授权）。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background: #f0f5fc; border-radius: 18px; padding: 0.8rem 1.5rem; margin-top: 1.2rem;">
+    <p style="font-weight: 500; color: #1f3e5c;">📌 重难点汇总</p>
+    <ul style="columns: 2 200px; column-gap: 2rem;">
+      <li>董事ESG谨慎勤勉义务（§180）</li>
+      <li>漂绿法律边界（《公司法》+《消费者法》）</li>
+      <li>双重否决规则 & 薪酬追回</li>
+      <li>现代奴隶制供应链治理</li>
+      <li>原住民文化遗产风险 & 尽责沟通</li>
+      <li>投资者尽责沟通策略</li>
+      <li>性别多样性投票政策</li>
+      <li>净零路径的合理依据</li>
+      <li>董事会ESG监督角色（战略、监督、风险、能力）</li>
+    </ul>
+  </div>
+
+  <!-- 下载区 -->
+  <div class="download">
+    <a id="downloadMdBtn" href="javascript:void(0)">📥 下载 Markdown 格式</a>
+    <div class="footnote">总结基于品职教育《企业出海ESG治理实务》内容，补充了董事会ESG监督角色及文化遗产尽责沟通，未虚构。</div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    function getMarkdown() {
+      let md = `# 企业出海ESG治理实务 · 专题总结（补充文化遗产尽责沟通）\n\n`;
+      md += `> 主讲：葛莹  |  基于品职教育资料  |  三大模块：董事会ESG治理 · 反漂绿合规 · ESG投资者关系\n\n`;
+      md += `## 📌 专题框架\n\n- **01 董事会ESG治理** — 法定责任与决策边界\n- **02 反漂绿合规** — 处罚与实操红线\n- **03 ESG投资者关系** — 海外资金方关注点\n\n---\n\n`;
+      
+      md += `## 01 董事会ESG治理\n\n`;
+      md += `### 董事会监督ESG及可持续发展相关事项的角色（补充）\n\n`;
+      md += `**战略与文化引领**\n- 设置符合组织可持续发展愿景、战略、目标和计划的文化氛围\n- 将重要的可持续发展问题纳入战略、商业计划、预算、风险管理及利益相关方管理\n- 确保董事会议程涵盖关键的可持续发展问题\n\n`;
+      md += `**监督与问责管理**\n- 监督可持续发展目标和计划的设定与实施\n- 监督可持续发展报告和披露的内部控制与鉴证过程\n- 使管理层对可持续发展政策、战略和目标的实施负责\n\n`;
+      md += `**风险与机遇治理**\n- 加强对可持续发展风险和机会影响的理解\n- 将可持续风险与机遇整合到战略与风险管理（气候情景分析、转型计划、物理/转型风险）\n\n`;
+      md += `**能力与体系建设**\n- 确保董事会具备必要的可持续发展技能和能力\n\n> 依据：AASB《可持续发展报告标准》、ASIC RG 000，要求披露气候风险对战略、商业模式、价值链、资产、现金流的影响及转型计划等。\n\n`;
+      
+      md += `### 1. 董事会职责\n- 战略与文化引领：提供战略方向，批准预算和商业计划，监督利益相关方互动\n- 监督与问责：监督战略实施、运营财务、可持续发展绩效，确保报告准确完整\n- 风险与机遇：确保风险识别、监控，审查内部合规与道德行为\n- 能力与体系：任命CEO并评估，监督董事会继任\n\n### 2. 董事职责（重难点）\n- 法定职责：谨慎勤勉（§180）、诚信、利益冲突管理、防止资不抵债\n- ESG义务：长期视角，考虑员工、客户、原住民等利益相关者\n- 违反后果：刑事/民事制裁、禁止任职、声誉损失\n\n### 3. 董事会ESG治理案例\n- McVeigh v REST Super（气候风险）\n- 薪酬合规连锁案（Domino's、7-Eleven、Woolworths、Wesfarmers）\n- 现代奴隶制（Sushi Bay、Blue Sky Kids Land、Easy Vaping）\n- 力拓朱卡恩峡谷爆破（双重否决）\n- AMP性骚扰处理不当\n- CBA文化崩塌（APRA重罚）\n\n> 双重否决规则：连续两年薪酬报告反对票>25%可触发董事会改选。\n\n---\n\n## 02 反漂绿合规\n\n### 1. 漂绿风险与动因\n- 漂绿：表述优于实际，选择性披露、模糊术语、无依据目标\n- 动因：ESG影响融资，技术路径不确定性导致过度乐观\n- 绿色沉默：减少披露可能引发合规问题\n\n### 2. 监管框架（重难点）\n- 《公司法》：禁止误导，未来事项需合理依据\n- 《消费者法》：禁止商业欺骗，要求可验证\n- 案例：Santos（驳回）、Active Super（罚款1050万）、Abrahams v CBA、ACCC互联网审查\n\n### 3. 降低漂绿风险实操\n- 事实依据，前瞻目标合理\n- 披露完整（正反两面）\n- 避免模糊措辞（清洁、绿色、零排放）\n- 内部审核+管理层确认；必要时第三方验证\n\n> 董事监督要点：审查所有ESG声明，质疑净零路径假设，推动外部鉴证。\n\n---\n\n## 03 ESG投资者关系\n\n### 1. 投资尽责管理\n- 两大支柱：互动沟通 (Engagement) 与投票 (Voting)\n- 重要性：未考虑ESG可能违反受托责任\n- 全球尽责守则：英国、澳大利亚、日本、新加坡等\n\n### 2. 互动沟通案例（重难点）\n- AGL分拆事件：股东反对致分拆取消\n- 文化遗产保护（力拓后续）：ACSI推动废除封口条款、关系重塑\n- 供应链反现代奴隶制：联合50家投资者推动审计、补救、预防\n\n### 🌿 文化遗产保护纳入尽责沟通（新增专项）\n- **背景**：力拓事件后，投资者认识到原住民权利与文化遗产管理是系统性财务风险。\n- **第一步：建立标准与摸底定基准** — ACSI与工作组制定“原住民关系风险框架”，锁定11家高风险公司，收集深度信息建立基准。\n- **第二步：直击最高治理层** — 与11家公司董事会/最高管理层举行20+次正式会议，直接向决策层施压。\n- **第三步：识别系统漏洞及整改** — 重点追踪：①废除“封口条款”；②关系重塑（交易型→尊重互信型）；③资源与授权（文化遗产团队获得充足财务资源与授权）。\n\n### 3. 投票政策与实践\n- ACSI性别多样性：ASX300女性<30%建议反对票（主席→提名委员会）\n- 成效：ASX200女性董事从<20%升至40%+\n- Aware Super五大支柱：ESG整合、沟通与投票、负面剔除、行业倡导、影响力投资\n\n---\n\n## 📊 重要机制\n\n- **双重否决规则**：①反对票>25%为第一击；②连续两年触发改选提案\n- **ACSI投票优先级**：主席 → 提名委员会主席 → 提名委员会成员 → 其他连任董事\n- **净零路径关键要素**：情景分析、假设、减缓行动、碳定价、范围1/2/3\n- **文化遗产尽责沟通三步法**：建立标准与摸底 → 直击最高治理层 → 识别系统漏洞及整改\n\n> 重难点：董事ESG义务、漂绿法律边界、双重否决、现代奴隶制、原住民风险、尽责沟通策略、性别多样性投票、董事会ESG监督角色。\n\n---\n\n*总结基于品职教育《企业出海ESG治理实务》内容，补充了董事会ESG监督角色及文化遗产尽责沟通，未虚构。*`;
+      return md;
+    }
+
+    document.getElementById('downloadMdBtn').addEventListener('click', function(e) {
+      const mdContent = getMarkdown();
+      const blob = new Blob([mdContent], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = '企业出海ESG治理实务_专题总结（补充文化遗产）.md';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+  })();
+</script>
+</body>
+</html>

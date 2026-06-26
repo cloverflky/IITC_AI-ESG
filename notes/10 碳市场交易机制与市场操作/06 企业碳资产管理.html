@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业碳资产管理专题总结 | 需求·框架·案例分析</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f4f9f5;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            padding: 40px 20px;
+            color: #1c2f2a;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+            padding: 32px 40px;
+        }
+        h1 {
+            font-size: 2rem;
+            border-left: 6px solid #2b7a62;
+            padding-left: 20px;
+            margin-bottom: 16px;
+            color: #1d5b4b;
+        }
+        h2 {
+            background: #e1f0ea;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-size: 1.5rem;
+            margin: 28px 0 16px 0;
+            color: #166653;
+        }
+        h3 {
+            margin: 20px 0 12px 0;
+            padding-left: 14px;
+            border-left: 4px solid #3ea38b;
+            color: #1f6e5a;
+        }
+        .highlight {
+            background: #fff7e0;
+            padding: 12px 18px;
+            border-left: 5px solid #e0a800;
+            margin: 18px 0;
+            border-radius: 16px;
+        }
+        .difficulty {
+            background: #feede8;
+            border-left: 6px solid #d95b1c;
+            padding: 12px 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+        .difficulty strong {
+            color: #b5440a;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 22px 0;
+            font-size: 0.9rem;
+            background: #fefef9;
+        }
+        th {
+            background: #2c7a66;
+            color: white;
+            padding: 10px 8px;
+        }
+        td, th {
+            border: 1px solid #cde0da;
+            padding: 8px 12px;
+        }
+        .formula {
+            background: #eef6f3;
+            font-family: monospace;
+            font-size: 0.95rem;
+            padding: 14px 20px;
+            border-radius: 28px;
+            border: 1px solid #c0dfd4;
+            margin: 18px 0;
+        }
+        .note {
+            background: #eaf5f9;
+            padding: 12px 20px;
+            border-radius: 20px;
+            border-left: 6px solid #2f8b74;
+            margin: 20px 0;
+        }
+        hr {
+            margin: 30px 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #caddf0, transparent);
+        }
+        .download-btn {
+            display: inline-block;
+            background: #2b7a62;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: bold;
+            margin: 20px 0 10px;
+            cursor: pointer;
+            border: none;
+            transition: 0.2s;
+        }
+        .download-btn:hover {
+            background: #1a5c49;
+        }
+        footer {
+            margin-top: 36px;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #5c7f74;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="exportContent">
+    <h1>🏢 企业碳资产管理 · 完整结构总结</h1>
+    <p style="margin-bottom: 20px;">基于原始资料第171-200页：碳资产管理需求来源（政府/出口/品牌/金融）、管理框架、三个企业深度案例（电力集团、中型制造企业、苹果公司），标注重难点并提取关键表格数据。</p>
+
+    <!-- 一、需求来源 -->
+    <h2>一、企业碳资产管理需求来源</h2>
+    <div class="difficulty">
+        <strong>🔶 重难点 1：外部强制性碳壁垒（CBAM、欧盟电池法案、美国CCA）对企业出口的直接影响</strong>
+    </div>
+    <ul>
+        <li><strong>政府部门要求</strong>：碳排放数据报送、配额履约、减排目标考核。</li>
+        <li><strong>产品出口要求</strong>：
+            <ul>
+                <li><strong>CBAM（碳边境调节机制）</strong>：2023年10月试行，2026年正式实施。覆盖水泥、钢铁、铝、电力、氢气、化肥。需核算产品碳排放因子，采购绿电（PPA）及生产减排。</li>
+                <li><strong>欧盟电池法案</strong>：2023年8月生效，2025年后要求碳足迹声明、材料回收、供应链尽职调查。</li>
+                <li><strong>美国清洁竞争法案（CCA）</strong>（提案阶段）：覆盖原油、造纸、乙醇、氮肥、水泥、石灰、钢铁、平板玻璃等，但目前未通过立法。</li>
+            </ul>
+        </li>
+        <li><strong>品牌企业要求</strong>：供应链脱碳压力，如苹果、沃尔玛等要求供应商披露碳数据并设定减排目标。</li>
+        <li><strong>投资方要求 </strong>：将ESG、绿色金融、可持续发展。</li>
+        <li><strong>自身长期发展的内在要求 </strong>：将碳管理纳入企业发展战略，由成本转为资产，成为企业发展引擎。</li>
+    </ul>
+    <div class="highlight">
+        📌 企业需整合来自多方的碳管理要求，将碳管理从“合规成本”转变为“战略性资产”。
+    </div>
+
+    <!-- 二、管理框架 -->
+    <h2>二、企业碳资产管理核心框架</h2>
+    <ul>
+        <li><strong>碳排放数据管理</strong>：检测（M）、报告（R）、核查（V）、披露。</li>
+        <li><strong>碳资产管理</strong>：配额管理、目标分解与考核、减排量管理、合规履约。</li>
+        <li><strong>碳交易管理</strong>：参与配额买卖、碳交易申请审批、交易买卖操作。</li>
+        <li><strong>碳金融</strong>：碳融资、碳衍生品。</li>
+        <li><strong>管理机制建设</strong>：碳资产管理组织、碳资产管理制度、碳资产管理工具（自动核算、配额预警、交易策略生成）。</li>
+    </ul>
+
+    <!-- 三、案例分析 -->
+    <h2>三、企业碳资产管理案例</h2>
+
+    <h3>案例一：集团型控排企业（某电力集团）</h3>
+    <ul>
+        <li><strong>统一管理策略</strong>：统一制定温室气体减排计划、统一组织排放统计、统一开发CCER、统一交易配额和自愿减排量。</li>
+        <li><strong>委托交易流程</strong>：集团设立碳资产管理部门，授权下属企业通过交易系统买卖配额。</li>
+        <li><strong>数字化工具</strong>：自动采集数据、自动核算配额、配额盈缺预测、生成交易策略建议。</li>
+    </ul>
+    <div class="note">
+        💡 电力集团通过集中化管理降低交易成本，利用CCER开发增加碳资产收益。
+    </div>
+
+    <h3>案例二：中型制造企业（中小型控排企业/品牌企业供应链，试点市场重点排放单位）</h3>
+    <div class="difficulty">
+        <strong>🔶 重难点 2：企业近零碳路径设计——从摸清家底到项目实施的完整闭环</strong>
+    </div>
+    <ul>
+        <li><strong>摸清碳家底</strong>：外购电力占90.6%，天然气5.8%，其他为辅。历史排放波动（2018-2021年8773吨），碳强度处于行业平均值74.46%，属领先水平。</li>
+        <li><strong>制定近零碳目标</strong>（核心指标）：
+            <ul>
+                <li>碳排放总量较2021年下降≥40%（实际测算下降41.14%）</li>
+                <li>单位产值碳排放量下降≥40%（实际46.14%）</li>
+                <li>可再生能源消费比重≥8%（实际35%）</li>
+            </ul>
+        </li>
+        <li><strong>实施项目</strong>：光伏发电、节能改造、绿电采购、管理体系建设。</li>
+        <li><strong>效益</strong>：碳排放降低、电费节约、近零碳认证。</li>
+    </ul>
+    <h4>近零碳企业创建核心指标表</h4>
+    <table>
+        <thead><tr><th>一级指标</th><th>指标名称</th><th>参考值</th><th>试点目标测算值</th></tr></thead>
+        <tbody>
+            <tr><td rowspan="2">碳排放</td><td>企业碳排放总量下降率(%)</td><td>较2021年下降40%以上</td><td>41.14%</td></tr>
+            <tr><td>单位产值碳排放量下降率(%)</td><td>较2021年下降40%以上</td><td>46.14%</td></tr>
+            <tr><td>能源</td><td>可再生能源消费比重(%)</td><td>≥8</td><td>35%</td></tr>
+            <tr><td>管理</td><td>碳排放管理体系建立</td><td>核心指标</td><td>已建立</td></tr>
+        </tbody>
+    </table>
+
+    <h3>案例三：品牌企业——苹果公司（综合碳足迹与碳中和）</h3>
+    <div class="difficulty">
+        <strong>🔶 重难点 3：范围3（价值链）碳足迹核算与碳信用抵消策略</strong>
+    </div>
+    <ul>
+        <li><strong>碳足迹范围</strong>：基于WRI GHG Protocol、ISO14040/14044，涵盖范围1、2、3（包括制造、产品运输、使用、报废处理等）。</li>
+        <li><strong>近年碳足迹数据（单位：吨CO₂当量）</strong>（摘自2024财年报告）：
+            <ul>
+                <li>2024年公司运营排放66,6800（范围1+范围2基于市场），产品生命周期排放14,500,000</li>
+                <li>碳信用额（公司+产品）约737,100，碳足迹净量14,500,000</li>
+            </ul>
+        </li>
+    </ul>
+    <h4>苹果公司碳足迹关键数据表（简化）</h4>
+    <table>
+        <thead><tr><th>财年</th><th>2024</th><th>2023</th><th>2022</th><th>2021</th><th>2020</th></tr></thead>
+        <tbody>
+            <tr><td>公司运营排放(范围1+2市场)</td><td>666,800</td><td>471,400</td><td>324,000</td><td>166,380</td><td>334,430</td></tr>
+            <tr><td>产品生命周期排放</td><td>14,500,000</td><td>15,570,000</td><td>20,280,000</td><td>23,020,000</td><td>22,260,000</td></tr>
+            <tr><td>碳信用总额</td><td>737,100</td><td>606,400</td><td>374,100</td><td>167,000</td><td>70,001</td></tr>
+            <tr><td>碳足迹净量</td><td>14,500,000</td><td>15,600,000</td><td>20,300,000</td><td>22,530,000</td><td>22,530,000</td></tr>
+        </tbody>
+    </table>
+    <ul>
+        <li><strong>碳中和战略</strong>：①设计与材料（再生材料、能效提升）；②清洁电力（2030年全价值链100%清洁电力）；③直接排放削减（工艺创新、淘汰化石燃料）；④碳清除（投资自然解决方案，如森林恢复）。</li>
+        <li><strong>碳清除项目</strong>：与减排并行，投资保护和恢复全球生态系统。</li>
+    </ul>
+
+    <!-- 四、案例总结 -->
+    <h2>四、企业碳资产管理案例总结</h2>
+    <ul>
+        <li>集团型控排企业：集中管理、层层落实、协同效应、资源调配、金融工具、信息化（从被动履约转向主动资产经营，利用数字化工具和碳金融提升收益。）</li>
+        <li>中小型控排企业/品牌企业供应链（我国主要为此）：体量较小、注重实施、范围二大、短平快、收益显著、近零碳目标</li>
+        <li>制造企业：近零碳路径可行，通过能效+绿电+管理实现深度减排。</li>
+        <li>品牌企业：雄心勃勃、行业变革、生命周期、透明披露、可持续发展、供应链（需核算全价值链碳足迹（特别是范围3），依靠清洁电力、材料创新、碳清除实现碳中和。）</li>
+    </ul>
+    <div class="note">
+        💡 共同趋势：碳管理纳入企业战略，数据驱动决策，参与碳市场和碳金融成为核心竞争力。
+    </div>
+
+    <hr>
+    <p style="font-size:0.85rem;">✅ 以上严格依据原始资料《碳交易-已解锁-已压缩》企业碳资产管理章节（第171-200页），涵盖需求来源、管理框架、三个案例及关键表格数据，未虚构信息。重难点已用🔶标注。</p>
+</div>
+<div style="text-align: center; margin-top: 20px;">
+    <button class="download-btn" id="downloadMarkdownBtn">📥 下载 Markdown 文件（企业碳资产管理）</button>
+</div>
+<footer>企业碳资产管理专题 · 需求·框架·案例 | 基于电力集团、制造企业、苹果公司数据</footer>
+
+<script>
+    function buildMarkdown() {
+        return `# 企业碳资产管理 · 完整结构总结
+
+## 一、企业碳资产管理需求来源
+🔶 **重难点1：外部碳壁垒**  
+- **CBAM**（2026正式实施）：覆盖水泥、钢铁、铝、电力、氢气、化肥，需核算产品碳足迹。  
+- **欧盟电池法案**：碳足迹声明、回收利用、尽职调查。  
+- **美国CCA**（提案中）：原油、造纸、乙醇、氮肥、水泥、石灰、钢铁等。  
+- 品牌企业供应链要求（如苹果、沃尔玛）。  
+- 金融机构ESG考核。
+
+## 二、管理框架
+- 碳排数据管理（MRV+披露）  
+- 碳资产管理（配额/目标/履约/减排量）  
+- 碳交易管理（买卖、策略）  
+- 碳金融（质押、回购、托管、衍生品）  
+- 数字化工具（自动核算、预警、策略生成）
+
+## 三、案例分析
+
+### 案例1：某电力集团（统一管理）
+- 统一温室气体减排计划、CCER开发、配额交易。  
+- 数字化平台自动采集数据、配额盈缺预测、交易策略。
+
+### 案例2：中型制造企业（近零碳路径）
+**碳排放现状**：外购电力90.6%，历史排放~8773吨（2021），强度优于行业平均。  
+
+**核心目标与测算值**：
+| 指标 | 目标 | 测算 |
+|------|------|------|
+| 总量下降率 | ≥40% | 41.14% |
+| 单位产值排放下降率 | ≥40% | 46.14% |
+| 可再生能源比重 | ≥8% | 35% |
+
+实施光伏、节能、绿电采购，实现减排及电费节约。
+
+### 案例3：苹果公司（全价值链碳中和）
+**碳足迹（2024财年）**：  
+- 公司运营排放 666,800 tCO₂e  
+- 产品生命周期排放 14,500,000 tCO₂e  
+- 碳信用抵消 737,100 tCO₂e  
+- 净碳足迹 14,500,000 tCO₂e  
+
+**四大减排支柱**：  
+1. 设计与材料（再生材料、能效）  
+2. 清洁电力（2030年100%）  
+3. 直接排放削减（工艺创新）  
+4. 碳清除（自然解决方案）
+
+## 四、案例总结
+- 控排企业：数字化+集中管理+碳金融。  
+- 制造企业：近零碳可行，依赖能效+绿电。  
+- 品牌企业：范围3核算与碳清除并重。
+
+> 基于原始资料第171-200页，未虚构。
+`;
+    }
+    document.getElementById('downloadMarkdownBtn').addEventListener('click', function() {
+        const md = buildMarkdown();
+        const blob = new Blob([md], { type: 'text/markdown' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = '企业碳资产管理总结.md';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
+</script>
+</body>
+</html>

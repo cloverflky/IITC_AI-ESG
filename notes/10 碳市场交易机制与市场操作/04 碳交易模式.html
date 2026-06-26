@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳交易模式 · 碳资产全流程图表（优化版）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f4f7fc;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            padding: 40px 20px;
+            color: #1c2e3a;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.07);
+            padding: 32px 40px;
+        }
+        h1 {
+            font-size: 2rem;
+            border-left: 6px solid #2b7a62;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: #1d5b4b;
+        }
+        h2 {
+            background: #e1f0ea;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-size: 1.5rem;
+            margin: 30px 0 16px 0;
+            color: #166653;
+        }
+        h3 {
+            margin: 20px 0 12px 0;
+            padding-left: 14px;
+            border-left: 4px solid #3ea38b;
+            color: #1f6e5a;
+        }
+        .highlight {
+            background: #fff7e0;
+            padding: 12px 18px;
+            border-left: 5px solid #e0a800;
+            margin: 18px 0;
+            border-radius: 16px;
+        }
+        .difficulty {
+            background: #feede8;
+            border-left: 6px solid #d95b1c;
+            padding: 12px 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+        .difficulty strong {
+            color: #b5440a;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 22px 0;
+            font-size: 0.9rem;
+            background: #fefef9;
+        }
+        th {
+            background: #2c7a66;
+            color: white;
+            padding: 10px 8px;
+        }
+        td, th {
+            border: 1px solid #cde0da;
+            padding: 8px 12px;
+        }
+        .formula {
+            background: #eef6f3;
+            font-family: monospace;
+            font-size: 0.95rem;
+            padding: 14px 20px;
+            border-radius: 28px;
+            border: 1px solid #c0dfd4;
+            margin: 18px 0;
+            overflow-x: auto;
+        }
+        .badge {
+            background: #cde9e1;
+            color: #146b56;
+            border-radius: 50px;
+            padding: 2px 14px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+        .badge-dark {
+            background: #1f6e5a;
+            color: white;
+        }
+        .note {
+            background: #eaf5f9;
+            padding: 12px 20px;
+            border-radius: 20px;
+            border-left: 6px solid #2f8b74;
+            margin: 20px 0;
+        }
+        hr {
+            margin: 30px 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #caddf0, transparent);
+        }
+        .download-btn {
+            display: inline-block;
+            background: #2b7a62;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0 10px;
+            cursor: pointer;
+            border: none;
+            transition: 0.2s;
+        }
+        .download-btn:hover {
+            background: #1a5c49;
+        }
+        footer {
+            margin-top: 36px;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #5c7f74;
+        }
+        /* 图表卡片 — 专门用于展示图片识别后的模块 */
+        .flow-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: #f6fbf9;
+            padding: 20px 24px;
+            border-radius: 30px;
+            border: 1px solid #cde3db;
+            margin: 16px 0;
+        }
+        .flow-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 6px 12px;
+            padding: 6px 0;
+            border-bottom: 1px dashed #d0e4dc;
+        }
+        .flow-row:last-child {
+            border-bottom: none;
+        }
+        .flow-label {
+            font-weight: 700;
+            color: #1a5c49;
+            min-width: 130px;
+            font-size: 0.9rem;
+        }
+        .flow-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 8px;
+        }
+        .flow-tags .badge {
+            font-size: 0.75rem;
+            padding: 2px 14px;
+            background: #e4f0eb;
+            color: #145a47;
+            border: 1px solid #b8d5cb;
+        }
+        .flow-tags .badge.badge-dark {
+            background: #1f6e5a;
+            color: white;
+            border-color: #1f6e5a;
+        }
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px 16px;
+            background: #f4faf7;
+            padding: 16px 20px;
+            border-radius: 24px;
+            border: 1px solid #cde3db;
+            margin-top: 8px;
+        }
+        .module-item {
+            background: white;
+            border-radius: 40px;
+            padding: 2px 14px;
+            border: 1px solid #c0dbd0;
+            font-size: 0.8rem;
+            color: #1a5c49;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .section-desc {
+            font-size: 0.9rem;
+            color: #2b5a4b;
+            margin-top: -4px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="exportContent">
+
+    <h1>📊 碳交易模式 · 碳资产全流程图表（优化版）</h1>
+    <p style="margin-bottom: 16px;">基于「04 碳交易模式.html」核心结构优化，融合图片「碳业务全景」识别内容，保留「企业减排」「减排量开发」等独有模块，以图表形式输出全链碳资产动作，并完整保留账户·规则·定价·会计核心内容。</p>
+
+    <!-- ========= 图片识别 · 图表化输出（保留第一份独有模块：企业减排、减排量开发） ========= -->
+    <h2>📋 碳资产全流程业务图表（图片识别整合）</h2>
+    <div class="flow-chart">
+        <!-- 交易准备 -->
+        <div class="flow-row">
+            <span class="flow-label">🔹 交易准备</span>
+            <div class="flow-tags">
+                <span class="badge badge-dark">账户开立</span>
+                <span class="badge">碳盘查</span>
+                <span class="badge">第三方核查</span>
+                <span class="badge">配额确认</span>
+                <span class="badge">申请配额调整</span>
+                <span class="badge">交易策略制定</span>
+                <span class="badge">法规解读</span>
+                <span class="badge">预算申报</span>
+            </div>
+        </div>
+        <!-- 交易过程 -->
+        <div class="flow-row">
+            <span class="flow-label">🔸 交易过程</span>
+            <div class="flow-tags">
+                <span class="badge badge-dark">线上盯盘</span>
+                <span class="badge">有偿竞拍</span>
+                <span class="badge">碳抵销</span>
+                <span class="badge">资金划转/配额划转</span>
+                <span class="badge">磋商谈判</span>
+                <span class="badge">合约拟订·法律风险识别</span>
+                <span class="badge">配额交易</span>
+                <span class="badge">CCER交易</span>
+                <span class="badge">履约清缴</span>
+                <span class="badge">交易复盘</span>
+            </div>
+        </div>
+        <!-- 交易相关 -->
+        <div class="flow-row">
+            <span class="flow-label">🔸 交易相关</span>
+            <div class="flow-tags">
+                <span class="badge badge-dark">CCER抵销配额履约</span>
+                <span class="badge">存管返还</span>
+                <span class="badge">自愿注销</span>
+                <span class="badge">会计处理</span>
+                <span class="badge">交易复盘</span>
+            </div>
+        </div>
+        <!-- 碳金融 -->
+        <div class="flow-row">
+            <span class="flow-label">🔹 碳金融</span>
+            <div class="flow-tags">
+                <span class="badge badge-dark">碳托管</span>
+                <span class="badge">碳抵押</span>
+                <span class="badge">碳置换</span>
+                <span class="badge">碳远期</span>
+                <span class="badge">碳掉期</span>
+                <span class="badge">碳债券</span>
+                <span class="badge">碳基金</span>
+            </div>
+        </div>
+        <!-- 企业减排（第一份独有，04无此模块） -->
+        <div class="flow-row">
+            <span class="flow-label">🔸 企业减排</span>
+            <div class="flow-tags">
+                <span class="badge badge-dark">摸清家底</span>
+                <span class="badge">制定目标</span>
+                <span class="badge">确定项目</span>
+                <span class="badge">项目实施</span>
+                <span class="badge">效益分析</span>
+            </div>
+        </div>
+        <!-- 企业碳资产管理 -->
+        <div class="flow-row">
+            <span class="flow-label">🔸 企业碳资产管理</span>
+            <div class="flow-tags">
+                <span class="badge badge-dark">碳资产管理部门</span>
+                <span class="badge">建立碳管理制度</span>
+                <span class="badge">建立交易制度</span>
+                <span class="badge">人员培训</span>
+                <span class="badge">盘查计划制定</span>
+                <span class="badge">长期减排战略制定</span>
+            </div>
+        </div>
+        <!-- 碳市场投资 -->
+        <div class="flow-row">
+            <span class="flow-label">🔸 碳市场投资</span>
+            <div class="flow-tags">
+                <span class="badge badge-dark">控排企业摸查</span>
+                <span class="badge">客户开发</span>
+                <span class="badge">政策研判</span>
+                <span class="badge">市场分析</span>
+            </div>
+        </div>
+        <!-- 碳市场监管 -->
+        <div class="flow-row">
+            <span class="flow-label">🔹 碳市场监管</span>
+            <div class="flow-tags">
+                <span class="badge badge-dark">签发预分配配额</span>
+                <span class="badge">交易异常处置</span>
+                <span class="badge">配额核定</span>
+                <span class="badge">配额下发</span>
+                <span class="badge">控排企业培训</span>
+                <span class="badge">履约监管</span>
+            </div>
+        </div>
+        <!-- 减排量开发（第一份独有，04无此模块） -->
+        <div class="flow-row">
+            <span class="flow-label">🔹 减排量开发</span>
+            <div class="flow-tags">
+                <span class="badge badge-dark">市场预测</span>
+                <span class="badge badge-dark">项目识别</span>
+                <span class="badge">方法学开发</span>
+                <span class="badge">项目文件编制</span>
+                <span class="badge">第三方审定</span>
+                <span class="badge">主管部门报批</span>
+                <span class="badge">减排量出售</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模块化总览（九大模块） -->
+    <div style="margin: 10px 0 18px 0;">
+        <span class="badge" style="background:#1f6e5a; color:white; padding:4px 18px;">📌 九大模块总览</span>
+        <span class="badge">交易准备</span>
+        <span class="badge">交易过程</span>
+        <span class="badge">交易相关</span>
+        <span class="badge">碳金融</span>
+        <span class="badge">企业减排</span>
+        <span class="badge">企业碳资产管理</span>
+        <span class="badge">碳市场投资</span>
+        <span class="badge">碳市场监管</span>
+        <span class="badge">减排量开发</span>
+    </div>
+
+    <!-- ====== 以下严格依据「04 碳交易模式.html」核心内容，并保留重难点标注 ====== -->
+    <hr>
+
+    <h2>一、全国碳市场账户体系</h2>
+    <ul>
+        <li><strong>注册登记系统</strong>（全国碳排放权注册登记结算系统）：记录配额持有、分配、履约清缴、注销等，相当于碳资产的“存折”。</li>
+        <li><strong>交易系统</strong>（全国碳排放权交易系统）：用于买卖申报、成交撮合、资金划转，与银行账户绑定。</li>
+        <li><strong>资金结算体系</strong>：交易资金通过交易系统与银行对接，实现T+0或T+1结算。</li>
+    </ul>
+    <div class="note">💡 两个系统协同：配额初始分配、履约清缴在注册登记系统完成；日常买卖在交易系统进行，交易完成后配额从交易系统转回注册登记系统。</div>
+
+    <h2>二、交易系统主要功能（重点排放单位视角）</h2>
+    <ul>
+        <li><strong>行情查看</strong>：实时挂单行情（挂牌交易）、大宗交易意向信息。</li>
+        <li><strong>交易申报</strong>：支持挂牌交易（价格优先，对手方最优价位成交）和大宗交易（双方议价、协议转让）。</li>
+        <li><strong>资金划转</strong>：银行账户与交易账户资金互转，用于支付购买配额款项或提取卖出所得。</li>
+        <li><strong>持仓管理</strong>：查询配额持有量、历史成交记录、资金流水。</li>
+    </ul>
+
+    <h2>三、交易模式详解：挂牌交易 &amp; 大宗交易</h2>
+    <div class="difficulty"><strong>🔶 重难点 1：挂牌交易与大宗交易的差异（规则、适用场景、信息披露）</strong></div>
+    <table>
+        <thead><tr><th>对比维度</th><th>挂牌交易</th><th>大宗交易</th></tr></thead>
+        <tbody>
+            <tr><td>成交方式</td><td>价格优先，在对手方最优5个价位内以对手方价格成交；可任意选择对手方摘牌</td><td>双方一对一协商价格、数量，确认后成交（可对话议价或点击申报）</td></tr>
+            <tr><td>单笔限额</td><td>通常适用于10万吨以下配额（原文提及“十万吨以下”）</td><td>适用于10万吨以上大额交易（大宗协议）</td></tr>
+            <tr><td>行情披露</td><td>即时行情实时显示挂单及成交信息</td><td>不纳入交易所即时行情，成交信息在交易结束后计入当日总量</td></tr>
+            <tr><td>交易对手</td><td>匿名，未知对手方</td><td>可明确交易对手，进行议价谈判</td></tr>
+            <tr><td>交易时间</td><td>周一至周五 9:30-11:30, 13:00-15:00</td><td>同上，但可预约或协商</td></tr>
+        </tbody>
+    </table>
+    <div class="highlight">📌 补充：2025年6月起全国碳市场启用<strong>单项竞价交易</strong>方式，采用统一价或申报价成交，时间段为10:00-10:30、10:30-11:00、13:30-14:00、14:00-14:30。</div>
+
+    <h3>开/收盘价计算规则</h3>
+    <ul>
+        <li><strong>开盘价</strong> = 当日挂牌交易第一笔成交价；无成交则以昨收盘价为开盘价。</li>
+        <li><strong>收盘价</strong> = 当日挂牌交易所有成交的加权平均价；无成交则以昨收盘价为收盘价。</li>
+    </ul>
+
+    <h2>四、碳价形成机制</h2>
+    <div class="difficulty"><strong>🔶 重难点 2：碳价的三因素决定模型</strong><br>碳价由 <strong>总量控制目标</strong> + <strong>减排成本</strong> + <strong>市场预期/流动性</strong> 共同决定。<br>原文指出：“总量控制目标与价值三因素共同形成碳价值机制”。</div>
+    <div class="formula">📐 简化模型：碳价 = f（配额稀缺程度, 企业边际减排成本, 政策稳定性, 金融参与度）</div>
+    <ul>
+        <li><strong>总量控制</strong>：设定排放上限越严格，配额稀缺性越高，碳价上升。</li>
+        <li><strong>企业减排成本</strong>：当减排成本高于碳价时，企业倾向于购买配额；反之则主动减排。</li>
+        <li><strong>市场因素</strong>：机构投资者参与、碳期货/期权等衍生品引入提升价格发现效率。</li>
+    </ul>
+
+    <h2>五、碳交易会计处理（财政部规定）</h2>
+    <div class="difficulty"><strong>🔶 重难点 3：碳排放权资产的确认与计量</strong><br>依据2019年12月财政部《碳排放权交易有关会计处理暂行规定》，适用于重点排放单位。</div>
+    <ul>
+        <li><strong>会计科目</strong>：1489 “碳排放权资产”（属于其他流动资产）。</li>
+        <li><strong>免费分配取得的配额</strong>：不作账务处理（表外登记）。</li>
+        <li><strong>购入取得的配额</strong>：按成本计量，借记“碳排放权资产”，贷记“银行存款”等。</li>
+        <li><strong>履约清缴时</strong>：使用免费配额无需处理；使用购入配额时，借记“营业外支出”或相关成本科目，贷记“碳排放权资产”。</li>
+        <li><strong>出售配额</strong>：出售免费配额取得的收入计入“营业外收入”；出售购入配额按差额确认损益。</li>
+    </ul>
+    <div class="note">
+        📊 示例分录（购入配额）<br>
+        借：碳排放权资产 &nbsp;&nbsp;&nbsp;&nbsp; 100万<br>
+        &nbsp;&nbsp; 贷：银行存款 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100万<br>
+        清缴时（使用购入配额）：<br>
+        借：营业外支出 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100万<br>
+        &nbsp;&nbsp; 贷：碳排放权资产 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100万
+    </div>
+
+    <h2>六、碳交易模式对比一览表</h2>
+    <table>
+        <thead><tr><th>交易模式</th><th>适用场景</th><th>价格形成</th><th>披露程度</th></tr></thead>
+        <tbody>
+            <tr><td>挂牌交易</td><td>小额、常规买卖（&lt;10万吨）</td><td>实时竞争报价，价格优先</td><td>即时行情公开</td></tr>
+            <tr><td>大宗交易</td><td>大额协议转让（≥10万吨）</td><td>双方议价，协商确定</td><td>不纳入即时行情，盘后统计</td></tr>
+            <tr><td>单项竞价</td><td>特定拍卖或政策安排（2025年新启用）</td><td>统一价或申报价成交</td><td>按竞价规则披露</td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <p style="font-size:0.85rem;">✅ 以上内容依据「04 碳交易模式.html」核心结构，融合图片识别内容，保留「企业减排」「减排量开发」等独有模块，完整涵盖账户体系、交易规则、碳价机制及会计处理。重难点已用🔶标注。</p>
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+    <button class="download-btn" id="downloadMarkdownBtn">📥 下载 Markdown（碳交易模式+全流程图表）</button>
+</div>
+<footer>碳交易模式 · 图表化全流程 | 规则+定价+会计+碳资产全景（优化版）</footer>
+
+<script>
+    function buildMarkdown() {
+        return `# 碳交易模式 · 碳资产全流程图表（优化版）
+
+## 碳资产全流程业务图表（图片识别整合）
+
+### 交易准备
+账户开立 · 碳盘查 · 第三方核查 · 配额确认 · 申请配额调整 · 交易策略制定 · 法规解读 · 预算申报
+
+### 交易过程
+线上盯盘 · 有偿竞拍 · 碳抵销 · 资金划转/配额划转 · 磋商谈判 · 合约拟订·法律风险识别 · 配额交易 · CCER交易 · 履约清缴 · 交易复盘
+
+### 交易相关
+CCER抵销配额履约 · 存管返还 · 自愿注销 · 会计处理 · 交易复盘
+
+### 碳金融
+碳托管 · 碳抵押 · 碳置换 · 碳远期 · 碳掉期 · 碳债券 · 碳基金
+
+### 企业减排（独有模块）
+摸清家底 · 制定目标 · 确定项目 · 项目实施 · 效益分析
+
+### 企业碳资产管理
+碳资产管理部门 · 建立碳管理制度 · 建立交易制度 · 人员培训 · 盘查计划制定 · 长期减排战略制定
+
+### 碳市场投资
+控排企业摸查 · 客户开发 · 政策研判 · 市场分析
+
+### 碳市场监管
+签发预分配配额 · 交易异常处置 · 配额核定 · 配额下发 · 控排企业培训 · 履约监管
+
+### 减排量开发（独有模块）
+市场预测 · 项目识别 · 方法学开发 · 项目文件编制 · 第三方审定 · 主管部门报批 · 减排量出售
+
+---
+
+## 一、全国碳市场账户体系
+- 注册登记系统：配额持有、分配、履约清缴、注销。
+- 交易系统：买卖申报、成交撮合、资金划转。
+- 双系统协同：配额分配/履约在登记系统，日常买卖在交易系统，成交后配额转回登记系统。
+
+## 二、交易系统主要功能（重点排放单位）
+行情查看、交易申报（挂牌/大宗）、资金划转、持仓管理。
+
+## 三、挂牌交易 vs 大宗交易（核心差异）
+| 维度 | 挂牌交易 | 大宗交易 |
+|------|----------|----------|
+| 成交方式 | 价格优先，对手方最优5价位内成交 | 双方议价，协议转让 |
+| 单笔限额 | 通常<10万吨 | ≥10万吨 |
+| 行情披露 | 即时行情公开 | 不纳入即时行情，盘后统计 |
+| 对手方 | 匿名 | 可明确对手方 |
+
+🔶 **重难点1**：两种交易方式在流动性、价格透明度和适用对象上不同。挂牌交易透明性强，适合中小批量；大宗交易灵活，适合大额定制化交易。
+
+2025年6月起新增**单项竞价交易**（统一价/申报价成交，四个时段）。
+
+开/收盘价：开盘价=第一笔成交价；收盘价=当日挂牌交易加权平均价。
+
+## 四、碳价形成机制
+🔶 **重难点2**：碳价由 **总量控制目标 + 减排成本 + 市场预期** 三因素共同决定。
+
+公式：碳价 = f(配额稀缺性, 边际减排成本, 政策稳定性, 金融参与度)
+
+## 五、碳交易会计处理（财政部暂行规定）
+- 科目：1489“碳排放权资产”
+- 免费配额：不作账务处理
+- 购入配额：按成本借记“碳排放权资产”
+- 清缴时：使用购入配额，借记“营业外支出”，贷记“碳排放权资产”
+- 出售配额：免费配额收入入“营业外收入”；购入配额差额确认损益
+
+🔶 **重难点3**：免费配额不入账导致表内仅反映购入配额，影响资产负债表结构；履约时点确认营业外支出。
+
+## 六、交易模式总结表
+| 模式 | 适用场景 | 价格形成 | 披露 |
+|------|----------|----------|------|
+| 挂牌交易 | 小额常规 | 实时竞争报价 | 即时行情 |
+| 大宗交易 | 大额协议 | 双方议价 | 盘后统计 |
+| 单项竞价 | 拍卖/特殊 | 统一价/申报价 | 按规则 |
+
+> 基于「04 碳交易模式.html」核心结构优化，融合图片识别内容，保留企业减排、减排量开发等独有模块。
+`;
+    }
+    document.getElementById('downloadMarkdownBtn').addEventListener('click', function() {
+        const mdContent = buildMarkdown();
+        const blob = new Blob([mdContent], { type: 'text/markdown' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = '碳交易模式_全流程图表_优化版.md';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
+</script>
+</body>
+</html>
