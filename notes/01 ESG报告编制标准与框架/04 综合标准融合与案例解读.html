@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合标准融合与案例解读 · 专题总结</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f2f6fc;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 60px rgba(0,20,40,0.08);
+            padding: 40px 48px;
+            position: relative;
+        }
+        h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.01em; color: #0b1e33; }
+        h1 {
+            font-size: 2.4rem;
+            border-left: 6px solid #1a6fb5;
+            padding-left: 20px;
+            margin-top: 0.2rem;
+            margin-bottom: 0.4rem;
+        }
+        .subhead {
+            color: #3a5a7a;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            padding-left: 26px;
+            border-bottom: 1px solid #e6edf5;
+            padding-bottom: 18px;
+        }
+        .section { margin-top: 2.8rem; }
+        .section-title {
+            font-size: 1.8rem;
+            background: #f0f6ff;
+            padding: 12px 20px;
+            border-radius: 16px;
+            border-left: 5px solid #2a7fc9;
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin: 20px 0;
+        }
+        .card {
+            background: #f9fbfe;
+            border-radius: 20px;
+            padding: 20px 22px;
+            border: 1px solid #e9eff7;
+        }
+        .card h4 { font-size: 1.2rem; color: #104079; margin-bottom: 6px; }
+        .badge {
+            display: inline-block;
+            background: #dce9f7;
+            color: #0b3f6b;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 12px;
+            border-radius: 30px;
+            margin-left: 8px;
+        }
+        .badge.important { background: #ffecdc; color: #b84a1c; }
+        .badge.highlight { background: #d1e6d4; color: #1b6b3a; }
+        ul, ol { padding-left: 20px; line-height: 1.6; color: #1f334a; }
+        li { margin-bottom: 6px; }
+        .table-wrap { overflow-x: auto; margin: 20px 0; border-radius: 16px; border: 1px solid #dce6f0; background: white; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            min-width: 600px;
+        }
+        th {
+            background: #e5eef9;
+            color: #07315a;
+            font-weight: 600;
+            padding: 14px 12px;
+            text-align: left;
+            border-bottom: 2px solid #c0d4e9;
+        }
+        td { padding: 12px; border-bottom: 1px solid #e2eaf3; vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        .highlight-box {
+            background: #eaf3fb;
+            border-radius: 16px;
+            padding: 16px 24px;
+            border-left: 5px solid #1a6fb5;
+            margin: 20px 0;
+        }
+        .tag {
+            display: inline-block;
+            background: #dae6f2;
+            border-radius: 30px;
+            padding: 2px 14px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #00427a;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #1a6fb5;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 30px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(20,80,150,0.2);
+        }
+        .download-btn:hover { background: #0f5a97; transform: translateY(-2px); }
+        .footnote {
+            font-size: 0.85rem;
+            color: #4f6c89;
+            margin-top: 24px;
+            border-top: 1px solid #dde6f0;
+            padding-top: 18px;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 24px 16px; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="summaryContainer">
+    <h1>📘 综合标准融合与案例解读</h1>
+    <div class="subhead">标准演进 · 全球框架 · A股/H股披露规则 · 标杆企业实践</div>
+
+    <!-- ========== 框架总览 ========== -->
+    <div class="section">
+        <div class="section-title">📌 专题框架总览</div>
+        <div class="card-grid">
+            <div class="card"><h4>🔹 标准演进与融合</h4>从分散倡议 → 聚焦深化 → 整合监管化。ISSB成立，欧盟CSRD/ESRS、中国指引体系。</div>
+            <div class="card"><h4>🔹 核心标准定位</h4>GRI (影响重要性) · ISSB (财务重要性) · SASB (行业工具) · TCFD/TNFD (气候/自然)。</div>
+            <div class="card"><h4>🔹 区域性标准</h4>欧盟ESRS (双重要性) · 中国财政部气候准则 · 交易所《指引》 · 香港《守则》。</div>
+            <div class="card"><h4>🔹 融合方法论</h4>议题融合 (双重重要性矩阵) · 指标融合 (纵向集成/横向对齐/叙事统合/索引)。</div>
+            <div class="card"><h4>🔹 A股案例 · 保利发展</h4>四要素披露框架，17项议题，气候风险情景分析，乡村振兴与公益。</div>
+            <div class="card"><h4>🔹 A+H股案例 · 顺丰控股</h4>双重要性评估，气候治理，能源转型，范围三排放披露，SASB/GRI索引。</div>
+        </div>
+    </div>
+
+    <!-- ========== 1. 标准演进与全球整合 ========== -->
+    <div class="section">
+        <div class="section-title">📖 一、标准演进与全球整合趋势</div>
+        <div class="highlight-box">
+            <strong>三个阶段：</strong><br>
+            <strong>① 1990s-2000s 分散倡议：</strong> 企业社会责任报告兴起。<br>
+            <strong>② 2010s 聚焦深化：</strong> SASB (行业实质性) 、TCFD (四支柱框架) 出现，形成“标准丛林”。<br>
+            <strong>③ 2020s 整合监管化：</strong> ISSB成立 (IFRS S1/S2) ，欧盟CSRD/ESRS强制，中国构建多层次披露体系。
+        </div>
+        <div class="card-grid">
+            <div class="card"><h4>GRI</h4>影响重要性视角，面向广泛利益相关方。</div>
+            <div class="card"><h4>ISSB (IFRS S1/S2)</h4>财务重要性视角，面向投资者，全球基线。</div>
+            <div class="card"><h4>SASB</h4>77个行业特定标准，已被ISSB吸收。</div>
+            <div class="card"><h4>TCFD/TNFD</h4>气候/自然风险披露框架，四支柱结构。</div>
+        </div>
+        <div><span class="badge important">重难点</span> <strong>“构建模块法”</strong>：各司法辖区以ISSB为基准，叠加本地要求 (如中国《指引》增设乡村振兴等议题)。</div>
+    </div>
+
+    <!-- ========== 2. 核心标准框架 ========== -->
+    <div class="section">
+        <div class="section-title">📚 二、核心标准框架定位与对比</div>
+        <div class="table-wrap">
+            <table>
+                <tr><th>标准</th><th>发布机构</th><th>核心功能</th><th>重要性视角</th></tr>
+                <tr><td>GRI Standards</td><td>GRI</td><td>全面影响披露，面向所有利益相关方</td><td>影响重要性</td></tr>
+                <tr><td>IFRS S1/S2 (ISSB)</td><td>ISSB</td><td>资本市场财务信息基线</td><td>财务重要性</td></tr>
+                <tr><td>SASB Standards</td><td>原SASB，现ISSB维护</td><td>77个行业实质性议题与KPI</td><td>财务重要性 (行业专用)</td></tr>
+                <tr><td>TCFD</td><td>FSB</td><td>气候相关财务披露框架 (四支柱)</td><td>财务重要性</td></tr>
+                <tr><td>TNFD</td><td>TNFD</td><td>自然相关披露 (LEAP方法论)</td><td>财务重要性</td></tr>
+                <tr><td>GHG Protocol</td><td>WRI/WBCSD</td><td>温室气体核算方法学 (范围1/2/3)</td><td>数据基础</td></tr>
+            </table>
+        </div>
+        <div><span class="badge important">重难点</span> GRI与ISSB已签署备忘录推动互操作性，企业可基于同一套数据分别按影响和财务视角报告。</div>
+    </div>
+
+    <!-- ========== 3. 区域性标准 ========== -->
+    <div class="section">
+        <div class="section-title">🌍 三、区域性标准 · 欧盟/中国/香港</div>
+        <div class="card-grid">
+            <div class="card"><h4>🇪🇺 欧盟 ESRS</h4>CSRD强制，12项标准，双重要性原则，首批2项跨领域+10项主题。</div>
+            <div class="card"><h4>🇨🇳 中国财政部气候准则</h4>《基本准则》+《气候准则》(试行) ，四支柱+影响，自愿→分步强制。</div>
+            <div class="card"><h4>🇨🇳 交易所《指引》</h4>21项议题，双重重要性，四要素披露框架，2026年首次强制。</div>
+            <div class="card"><h4>🇭🇰 香港《守则》</h4>“不遵守就解释”，D部分气候披露与IFRS S2对齐，分阶段实施。</div>
+        </div>
+        <div class="highlight-box">
+            <strong>中国特色议题：</strong> 乡村振兴、创新驱动、科技伦理、供应链安全、平等对待中小企业。
+        </div>
+    </div>
+
+    <!-- ========== 4. 融合方法论 ========== -->
+    <div class="section">
+        <div class="section-title">🔗 四、综合标准融合 · 核心方法论</div>
+        <div style="display:flex; flex-wrap:wrap; gap:16px;">
+            <div style="flex:1; min-width:200px; background:#f5f9ff; border-radius:16px; padding:16px;">
+                <h4>议题融合</h4>
+                <ul>
+                    <li>广泛扫描 (GRI+本土清单)</li>
+                    <li>聚焦筛选 (SASB行业+ISSB财务)</li>
+                    <li>整合定位 (双重重要性矩阵)</li>
+                </ul>
+            </div>
+            <div style="flex:1; min-width:200px; background:#f5f9ff; border-radius:16px; padding:16px;">
+                <h4>指标融合</h4>
+                <ul>
+                    <li><strong>纵向集成：</strong>基石层(强制) → 增强层(SASB等) → 扩展层(GRI/SDGs)</li>
+                    <li><strong>横向对齐：</strong>跨标准指标映射 (等效性判断)</li>
+                    <li><strong>叙事统合：</strong>四要素逻辑 (治理/战略/风险管理/指标目标)</li>
+                    <li><strong>指标索引：</strong>附录对标索引表</li>
+                </ul>
+            </div>
+        </div>
+        <div><span class="badge important">重难点</span> <strong>横向对齐示例</strong>：水资源指标同时回应GRI 303、港交所KPI A2.2、SDG 6.4，实现“一数多用”。</div>
+    </div>
+
+    <!-- ========== 5. A股案例·保利发展 ========== -->
+    <div class="section">
+        <div class="section-title">🏢 五、A股案例 · 保利发展2024</div>
+        <p><strong>报告依据：</strong> 上交所《指引》+ GRI Standards + 央企ESG参考指标 + CASS-ESG 5.0</p>
+        <div style="display:flex; flex-wrap:wrap; gap:16px;">
+            <div style="flex:1; min-width:200px;">
+                <h4>🔍 双重重要性分析</h4>
+                <ul>
+                    <li>17项议题 (环境6/社会7/治理4)</li>
+                    <li>高度影响重要性：优质产品、资源循环、装配式建筑、供应链等</li>
+                    <li>高度财务重要性：装配式建筑、气候变化、乡村振兴等</li>
+                </ul>
+            </div>
+            <div style="flex:1; min-width:200px;">
+                <h4>📈 气候披露 (四支柱)</h4>
+                <ul>
+                    <li>治理：董事会+可持续发展工作组</li>
+                    <li>战略：情景分析 (RCP4.5/RCP8.5)</li>
+                    <li>风险管理：转型/物理风险排序</li>
+                    <li>指标：范围1/2/3排放，强度</li>
+                </ul>
+            </div>
+        </div>
+        <p><span class="tag">特色议题</span> 乡村振兴 (星火班、和基金) 、装配式建筑、社区公益。</p>
+        <div><span class="badge important">重难点</span> 四要素披露框架的完整应用：每个财务重要性议题均按“治理-战略-风险管理-指标目标”展开。</div>
+    </div>
+
+    <!-- ========== 6. A+H股案例·顺丰控股 ========== -->
+    <div class="section">
+        <div class="section-title">📦 六、A+H股案例 · 顺丰控股2024</div>
+        <p><strong>双重上市：</strong> A股 (深交所) + H股 (港交所) ，首次实施双重要性评估。</p>
+        <div style="display:flex; flex-wrap:wrap; gap:16px;">
+            <div style="flex:1; min-width:200px;">
+                <h4>🔍 双重要性流程</h4>
+                <ul>
+                    <li>影响重要性：问卷+访谈 (影响程度+可能性)</li>
+                    <li>财务重要性：资源使用连续性+关系依赖性</li>
+                    <li>矩阵排序，董事会确认</li>
+                </ul>
+            </div>
+            <div style="flex:1; min-width:200px;">
+                <h4>🌿 气候治理</h4>
+                <ul>
+                    <li>董事会战略委员会监督</li>
+                    <li>情景分析：SSP1-2.6 / SSP5-8.5</li>
+                    <li>范围三排放 (类别1-15) 全面披露</li>
+                    <li>SBTi承诺，2030碳效率+55%</li>
+                </ul>
+            </div>
+        </div>
+        <p><span class="tag">融合亮点</span> 同时满足A股《指引》与港交所《守则》，索引表覆盖GRI、SASB、联交所、深交所。</p>
+        <div><span class="badge important">重难点</span> 范围三排放的完整披露 (类别1-15) 及外部鉴证 (SGS) ，体现数据治理能力。</div>
+    </div>
+
+    <!-- ========== 7. A股vs港股对比 ========== -->
+    <div class="section">
+        <div class="section-title">⚖️ 七、A股《指引》 vs 港股《守则》对比</div>
+        <div class="table-wrap">
+            <table>
+                <tr><th>维度</th><th>A股《指引》</th><th>港股《守则》</th></tr>
+                <tr><td>适用主体</td><td>主要指数成分股+境内外同时上市 (强制)</td><td>全体主板/GEM发行人</td></tr>
+                <tr><td>披露原则</td><td>双重重要性 (财务+影响)</td><td>财务重要性为主，兼顾影响 (持份者参与)</td></tr>
+                <tr><td>披露框架</td><td>治理-战略-影响/风险/机遇-指标目标</td><td>管治-策略-风险管理-指标目标 (D部分)</td></tr>
+                <tr><td>气候披露</td><td>鼓励范围三，情景分析有条件</td><td>强制范围1/2，范围三按IFRS S2，分阶段</td></tr>
+                <tr><td>过渡期</td><td>2026年4月30日前首次披露</td><td>2025财年“不遵守就解释”，2026财年大型股强制</td></tr>
+                <tr><td>第三方鉴证</td><td>鼓励，明确鉴证报告内容</td><td>无明文，但ISSB准则具可鉴证性</td></tr>
+            </table>
+        </div>
+        <div><span class="badge important">重难点</span> A+H股公司需同时满足两地要求，通过指标映射实现“一份数据，两地报告”。</div>
+    </div>
+
+    <!-- ========== 8. 关键索引与绩效表 ========== -->
+    <div class="section">
+        <div class="section-title">📋 附 · 关键索引与绩效表示例</div>
+        <div class="highlight-box">
+            <strong>保利发展 · 环境绩效表：</strong> 范围1/2/3排放，能源总耗量，用水量，废弃物，强度指标 (吨CO₂/百万元)。<br>
+            <strong>顺丰控股 · 范围三披露：</strong> 类别1 (外购商品) 、类别4 (上游运输) 等，2024年总计788万吨CO₂。
+        </div>
+        <div><span class="tag">索引类型</span> 上交所《指引》索引 · 联交所《守则》索引 · GRI标准索引 · SASB行业索引 · 央企ESG参考指标索引 · CASS-ESG索引。</div>
+    </div>
+
+    <div class="footnote">
+        ⚡ 本总结基于《04 综合标准融合与案例解读.pdf》完整结构，涵盖标准演进、全球框架、区域性规则、融合方法论及保利发展/顺丰控股案例。内容忠实于原始材料，无虚构。
+    </div>
+    <button class="download-btn" id="downloadMarkdown">📥 下载 Markdown 格式</button>
+</div>
+
+<script>
+    document.getElementById('downloadMarkdown').addEventListener('click', function() {
+        const container = document.getElementById('summaryContainer');
+        const clone = container.cloneNode(true);
+        const btn = clone.querySelector('#downloadMarkdown');
+        if (btn) btn.remove();
+
+        let md = '# 综合标准融合与案例解读 · 专题总结\n\n';
+        md += '> 基于《04 综合标准融合与案例解读.pdf》完整结构，涵盖标准演进、全球框架、区域性规则、融合方法论及案例。\n\n';
+
+        const sections = clone.querySelectorAll('.section');
+        sections.forEach(sec => {
+            const titleEl = sec.querySelector('.section-title');
+            if (titleEl) md += '## ' + titleEl.textContent.trim() + '\n\n';
+
+            const cards = sec.querySelectorAll('.card');
+            cards.forEach(c => {
+                const h4 = c.querySelector('h4');
+                if (h4) md += '**' + h4.textContent.trim() + '** ';
+                const p = c.textContent.replace(h4 ? h4.textContent : '', '').trim();
+                if (p) md += p + '\n\n';
+            });
+
+            const uls = sec.querySelectorAll('ul, ol');
+            uls.forEach(ul => {
+                ul.querySelectorAll('li').forEach(li => md += '- ' + li.textContent.trim() + '\n');
+                md += '\n';
+            });
+
+            const tables = sec.querySelectorAll('table');
+            tables.forEach(table => {
+                const rows = table.querySelectorAll('tr');
+                rows.forEach((row, ri) => {
+                    const cells = row.querySelectorAll('th, td');
+                    md += '| ' + Array.from(cells).map(c => c.textContent.trim()).join(' | ') + ' |\n';
+                    if (ri === 0) md += '| ' + cells.map(() => '---').join(' | ') + ' |\n';
+                });
+                md += '\n';
+            });
+
+            const highlights = sec.querySelectorAll('.highlight-box');
+            highlights.forEach(h => {
+                md += '> ' + h.textContent.trim().replace(/\n/g, '\n> ') + '\n\n';
+            });
+        });
+
+        const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = '综合标准融合与案例解读_总结.md';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
+</script>
+</body>
+</html>

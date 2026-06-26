@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳排放核算方法与工具 - 专题框架总结</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            background-color: #f9fafb;
+            color: #1f2937;
+        }
+        h1 {
+            font-size: 2rem;
+            border-left: 6px solid #2c7a4d;
+            padding-left: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            color: #0f3b2c;
+        }
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #cbd5e1;
+            color: #1e5a3a;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #2b6e47;
+        }
+        h4 {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+            color: #2c3e2f;
+        }
+        ul, ol {
+            margin-top: 0.25rem;
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.3rem 0;
+        }
+        .card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #e5e7eb;
+        }
+        .badge {
+            background-color: #e9f5ef;
+            color: #1f6e43;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border: 0;
+            height: 1px;
+            background: #ddd;
+        }
+        footer {
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6b7280;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1rem;
+        }
+        .note {
+            background-color: #fef9e3;
+            border-left: 4px solid #e6b12e;
+            padding: 0.6rem 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            h1 { font-size: 1.7rem; }
+            h2 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+<h1>📘 碳排放核算方法与工具 · 专题框架总结</h1>
+<p>基于《品职教育 人工智能ESG分析师 碳排放核算方法与工具》原内容整理，完整保留文档结构与核心知识点，未添加虚构信息。</p>
+
+<div class="card">
+    <h2>🌱 一、碳核算介绍</h2>
+    <ul>
+        <li><strong>碳管理行业主要业务方向</strong> – 企业碳管理、碳中和规划等</li>
+        <li><strong>碳中和关键概念</strong>
+            <ul>
+                <li>净零排放 ≠ 零排放；正排放 - 负排放 = 0</li>
+                <li>碳：涵盖所有温室气体 (CO₂, CH₄, N₂O, HFCs, PFCs, SF₆, NF₃)，采用GWP换算为CO₂e</li>
+                <li>碳中和 = 所有温室气体的中和</li>
+            </ul>
+        </li>
+        <li><strong>碳核算目标</strong> – “无量化，无管理”，了解排放源及每个源排放量</li>
+        <li><strong>全球排放源结构</strong>
+            <ul>
+                <li>能源使用碳排放 80%</li>
+                <li>工业生产过程 约3% (水泥、钢铁为主)</li>
+                <li>甲烷逸散 约15% (煤油气泄漏、反刍动物、农业)</li>
+                <li>烈性温室气体 (N₂O农业化肥、HFCs制冷剂、PFCs/NF₃半导体、SF₆高压开关)</li>
+            </ul>
+        </li>
+        <li><strong>案例</strong> – 英国碳信托帮助Walkers薯片测量碳足迹，优化原材料存储和制造过程，碳足迹降低7%</li>
+        <li><strong>如何实现碳中和（不同排放源路径）</strong>
+            <ul>
+                <li>能源部分：用能设备电气化 + 可再生能源供电</li>
+                <li>工业工艺排放：水泥→CCS；钢铁→绿氢替代焦炭</li>
+                <li>甲烷排放：监控泄漏/甲烷回收/减少养殖</li>
+                <li>烈性温室气体：收集工业副产物并分解</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>📌 二、碳核算的重要性和复杂性</h2>
+    <h3>2.1 重要性</h3>
+    <ul>
+        <li>碳核算是碳管理的基础（制定碳中和规划、准确数据支撑）</li>
+        <li>ESG中碳排放信息要求：PRI签署机构超5370家，管理资产超121万亿美金</li>
+        <li>金融监管强制披露；ESG评级（MSCI、FTSE Russell）默认最低评级；CDP问卷不回复即F评级</li>
+    </ul>
+    <h3>2.2 复杂性</h3>
+    <ul>
+        <li>排放源多样，范围1/2/3涉及成百上千数据点</li>
+        <li>数据可获取性与质量问题（尤其范围3）</li>
+        <li>排放因子适用性与准确性</li>
+        <li>法规和标准不一致（跨国企业挑战）</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>🧾 三、碳核算相关概念</h2>
+    <h3>3.1 必通概念</h3>
+    <ul>
+        <li><strong>温室气体(GHG)</strong> – 7大类，CO₂, CH₄, N₂O, HFCs, PFCs, SF₆, NF₃</li>
+        <li><strong>直接排放(Scope 1)</strong> – 企业拥有/控制的排放源</li>
+        <li><strong>间接排放</strong> – Scope 2 (外购电力/热力)，Scope 3 (其他间接，如上下游、员工通勤、产品使用)</li>
+        <li><strong>GHG inventory</strong> – 组织层面/区域层面碳核算</li>
+        <li><strong>碳足迹(Carbon Footprint)</strong> – 产品全生命周期GHG排放总量</li>
+        <li><strong>生命周期评估(LCA)</strong> – 从原料到废弃全过程环境影响分析</li>
+        <li><strong>碳核查(Carbon Verification)</strong> – 独立验证数据真实性与准确性</li>
+        <li><strong>碳盘查/审计(Carbon Audit)</strong> – 全面评估碳管理策略及减排效果</li>
+        <li><strong>全球变暖潜能(GWP)</strong> – 相对CO₂的增温效应，转换为CO₂e</li>
+        <li><strong>排放因子(Emission Factor)</strong> – 单位活动产生的GHG排放量</li>
+        <li><strong>碳抵消(Carbon Offsetting)</strong> – 购买环境权益（碳信用、绿证）补偿排放</li>
+        <li><strong>碳强度(Carbon Intensity)</strong> – 单位产品/服务/能量的排放量</li>
+    </ul>
+    <h3>3.2 碳核算总体思路</h3>
+    <p>碳排放量 = 活动数据 × 排放因子 × GWP值</p>
+</div>
+
+<div class="card">
+    <h2>📚 四、碳核算标准（国际 & 国内）</h2>
+    <h3>4.1 IPCC指南</h3>
+    <ul>
+        <li>《IPCC 2006国家温室气体清单指南》，全球权威框架，支持《联合国气候变化框架公约》</li>
+        <li>核算方法：排放因子法（适用范围广）、质量平衡法（设施/工艺层面）</li>
+        <li>指南构成：能源、工业过程和产品使用、农业&林业&土地利用变化、废弃物</li>
+    </ul>
+    <h3>4.2 GHG Protocol（温室气体核算体系）</h3>
+    <ul>
+        <li>由WRI和WBCSD发起，包括企业标准、价值链标准(范围3)、产品标准、项目标准、城市标准</li>
+        <li>企业标准流程：设定组织/运营边界、跟踪长期排放、识别计算、质量管理、报告核查、设定目标</li>
+        <li>广泛应用于财富500强、CDP、自愿碳市场</li>
+    </ul>
+    <h3>4.3 ISO 14060系列</h3>
+    <ul>
+        <li><strong>ISO 14064-1/2/3</strong> – 组织/项目层面量化、报告、验证；分为三个部分：组织层级、项目层级、核查确认</li>
+        <li><strong>ISO 14067</strong> – 产品碳足迹量化方法学，基于LCA，含4阶段：目的范围、清单分析、影响评估、解释</li>
+        <li><strong>ISO 14068-1</strong> – 全球首个碳中和量化标准（2023），明确实现和证明碳中和的原则与要求</li>
+    </ul>
+    <h3>4.4 PAS 2050</h3>
+    <ul>
+        <li>全球首个产品碳足迹方法标准（英国BSI），基于LCA，侧重单一环境问题（GHG），不规定披露要求</li>
+    </ul>
+    <h3>4.5 中国核心标准</h3>
+    <ul>
+        <li>24个行业温室气体排放核算方法与报告指南（发改办气候分三批）</li>
+        <li>《企业温室气体排放核算与报告指南 发电设施》 – 碳市场数据质量管理核心技术规范</li>
+        <li>《省级温室气体清单编制指南(试行)》 – 区域层面碳核算（参考IPCC）</li>
+        <li>GB/T 24067-2024《温室气体 产品碳足迹 量化要求和指南》 – 2024.10.1实施，填补国内通用标准空白，转化ISO 14067</li>
+    </ul>
+    <h3>4.6 欧盟 & 美国体系</h3>
+    <ul>
+        <li><strong>PEF (Product Environmental Footprint)</strong> – 欧盟LCA体系，细致严格，新电池法要求采用PEF及PEFCRs</li>
+        <li><strong>EU ETS</strong> – 欧盟排放交易体系，覆盖电力、工业、航空、海运等特定温室气体，需提交年度排放报告</li>
+        <li><strong>美国GHGRP</strong> – 美国环保署温室气体报告计划，年排放≥25,000吨CO₂e的设施强制报告</li>
+    </ul>
+    <h3>4.7 标准总结表</h3>
+    <p>涵盖IPCC指引、GHG Protocol、ISO14064/14067、PAS2050、中国行业指南、发电设施指南、PEF等及其适用层级（国家/区域/组织/产品/项目）。</p>
+</div>
+
+<div class="card">
+    <h2>🏭 五、组织层面碳核算</h2>
+    <h3>5.1 可参考标准（国内+国际）</h3>
+    <ul><li>GHG Protocol、ISO 14064-1、中国发电设施指南、24个行业指南、工业企业通则等</li></ul>
+    <h3>5.2 五项基本原则</h3>
+    <p>相关性、完整性、一致性、准确性、透明性。</p>
+    <h3>5.3 碳核算步骤</h3>
+    <ul>
+        <li>设定组织边界 & 运营边界</li>
+        <li>跟踪长期排放量（基准年选择与重算）</li>
+        <li>排放源识别（用能设备、工艺流程、现场巡场）</li>
+        <li>排放量量化（收集活动数据、选择排放因子、计算）</li>
+        <li>数据质量与不确定性分析</li>
+        <li>数据汇总报告</li>
+    </ul>
+    <h3>5.4 界定边界</h3>
+    <ul>
+        <li><strong>组织边界</strong>：股权比例法（按股权比例分摊）、控制权法（财务控制/运营控制，100%计入控制的排放）</li>
+        <li><strong>运营边界</strong>：范围一（直接：固定/移动燃烧、过程、逸散）、范围二（外购电力/热力，区分基于区域/基于市场）、范围三（价值链15类，可选但重要）</li>
+        <li>ISO 14064-1:2018 将间接排放细分为6类（范畴一至范畴六）</li>
+    </ul>
+    <h3>5.5 基准年与重算政策</h3>
+    <ul><li>选择能反映企业经营常态的年份；发生收购、剥离、方法变更等需重新计算基线。</li></ul>
+    <h3>5.6 量化方法</h3>
+    <ul>
+        <li><strong>排放因子法</strong>：活动数据 × 排放因子 × GWP</li>
+        <li><strong>质量平衡法</strong>：(输入碳 - 输出碳) × 44/12（适用于化工、冶金等）</li>
+    </ul>
+    <h3>5.7 活动数据与排放因子选择</h3>
+    <ul>
+        <li>活动数据来源：财务采购记录、盘存、炉前过磅；优先高精度计量数据</li>
+        <li>排放因子：IPCC缺省值、中国指南参数、区域/全国电网排放因子（如2021/2022年发布值）、基准线排放因子（用于新能源减排）</li>
+        <li>绿电/绿证处理：方法一（绿证电量碳排放归零）、方法二（替代化石能源减排量扣除）</li>
+        <li>计算工具：GHG Protocol跨行业/特定行业工具（铝、钢铁、水泥、造纸等）</li>
+    </ul>
+    <h3>5.8 数据剔除原则</h3>
+    <ul><li>占比低于1%且累计剔除≤5%；数据易获取或易减排的源尽量保留</li></ul>
+    <h3>5.9 不确定性分析与报告</h3>
+    <ul><li>定性、定量、定级分析；报告需包括排放总量、各范围数据、基准年、方法学、碳抵消信息等</li></ul>
+    <h3>5.10 监测计划编写</h3>
+    <ul><li>示例：燃料消耗量、热值、含碳量、氧化率等数据获取方式及测量设备校准频次</li></ul>
+    <h4>案例（组织层面）</h4>
+    <ul>
+        <li>固定燃烧（无烟煤）碳排放计算</li>
+        <li>移动燃烧（柴油/汽油货车）计算</li>
+        <li>工艺碳排放（碳酸钙分解）</li>
+        <li>废水处理厌氧工艺甲烷排放</li>
+        <li>外购电力（绿电与电网因子）间接排放</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>🗺️ 六、区域层面碳核算（温室气体清单编制）</h2>
+    <h3>6.1 参考标准</h3>
+    <ul><li>《IPCC国家温室气体清单指南》、《省级温室气体清单指南》、《城市温室气体核算工具指南》(WRI)</li></ul>
+    <h3>6.2 质量原则</h3>
+    <p>透明性、完整性、一致性、可比性、确定性。</p>
+    <h3>6.3 五大领域碳排放（核心框架）</h3>
+    <ul>
+        <li><strong>能源活动排放</strong>：化石燃料燃烧（固定源/移动源、分部门分燃料）、生物质燃烧（仅CH₄/N₂O）</li>
+        <li><strong>工业生产过程排放</strong>：水泥、石灰、钢铁、电石、硝酸、己二酸、铝、镁、半导体、HCFC-22等</li>
+        <li><strong>农业碳排放</strong>：稻田甲烷、农用地氧化亚氮（直接/间接）、动物肠道发酵甲烷、动物粪便管理CH₄/N₂O</li>
+        <li><strong>土地利用变化和林业</strong>：森林和其他木质生物质碳储量变化、森林转化燃烧/分解排放</li>
+        <li><strong>废弃物处理排放</strong>：固体废弃物填埋/焚烧、生活污水/工业废水处理产生的CH₄和N₂O</li>
+    </ul>
+    <h3>6.4 数据收集与不确定性</h3>
+    <ul><li>优先当地统计部门数据，跨界按区域归属原则拆分；不确定性来源：模型、数据缺失、测量误差等，可通过改进模型、精确测量、增加样本降低不确定性。</li></ul>
+    <h3>6.5 质量保证与控制</h3>
+    <ul><li>QC定期检验一致性、正确性；QA邀请独立专家评审；成文存档所有清单编制活动。</li></ul>
+    <h3>6.6 报告编写</h3>
+    <ul><li>总报告+五大领域独立章节，包含排放源界定、方法、活动数据、排放因子、排放量及不确定性。</li></ul>
+</div>
+
+<div class="card">
+    <h2>📦 七、产品层面碳核算（产品碳足迹PCF）</h2>
+    <h3>7.1 定义与意义</h3>
+    <ul><li>产品全生命周期GHG排放与清除总和（CO₂e）。应对欧盟政策、客户要求及消费者关注。</li></ul>
+    <h3>7.2 与组织碳核算的关系</h3>
+    <ul><li>产品碳足迹涵盖范围1、2、3，体现上游至下游完整价值链。</li></ul>
+    <h3>7.3 生命周期评价(LCA)</h3>
+    <ul><li>从摇篮到坟墓/摇篮到大门/大门到大门等系统边界。</li></ul>
+    <h3>7.4 产品碳足迹核算七步法</h3>
+    <ol>
+        <li><strong>确定业务目标</strong> – 识别机遇、推动减排、成本预估等</li>
+        <li><strong>确定清单范围</strong> – 功能单位（如1升牛奶、500ml饮料）、温室气体种类</li>
+        <li><strong>确定系统边界</strong> – 从摇篮到坟墓/大门等，并遵循实质性原则（覆盖≥95%排放）</li>
+        <li><strong>绘制过程图</strong> – 展示每个工序的输入（材料/能源）与输出（产品/废弃物）</li>
+        <li><strong>收集数据</strong> – 初级数据（自有/供应商具体数据）、次级数据（Ecoinvent、GaBi、ELCD等），优先初级数据，上游贡献＞10%需提供初级数据</li>
+        <li><strong>计算结果</strong> – 借助软件（碳云、碳擎等），涉及共生产品按金额拆分，包括废弃物处理排放</li>
+        <li><strong>碳足迹报告及碳标签</strong> – 原材料/半成品出具报告；终端消费品申请碳标签（中国电子节能技术协会、英国碳信托、韩国、台湾等碳标签体系）</li>
+    </ol>
+    <h3>7.5 案例示范</h3>
+    <ul><li>乳制品碳足迹（牧场、加工、运输、废弃阶段）详细计算展示，得出1.113 kg CO₂e/升牛奶。</li></ul>
+</div>
+
+<div class="card">
+    <h2>📎 附录：补充内容与工具</h2>
+    <ul>
+        <li><strong>碳交易试点地区电网排放因子</strong>（上海0.42，湖北0.5257，广东0.6379等）</li>
+        <li><strong>省级温室气体清单编制表格样例</strong>（能源、工业、农业、林业、废弃物等）</li>
+        <li><strong>城市温室气体核算工具2.2表格</strong>（WRI编制辅助工具）</li>
+        <li><strong>质量控制/保证程序</strong>流程图、不确定性分析方法等</li>
+        <li><strong>监测计划示例</strong>（燃料消耗量、热值测量设备及校准频次）</li>
+        <li><strong>GHG Protocol跨行业计算工具</strong>（固定/移动燃烧、HFCs、不确定性分析）及特定行业工具（炼铝、钢铁、水泥、半导体等）</li>
+    </ul>
+</div>
+
+<footer>依据《品职教育 人工智能ESG分析师 碳排放核算方法与工具》原始内容提取，保持原章节结构与术语，无虚构增补。 | 总结时间: 2026年</footer>
+</body>
+</html>
